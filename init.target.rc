@@ -42,3 +42,22 @@ on post-fs
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
+
+on boot
+#USB controller configuration
+    setprop vendor.usb.rndis.func.name "gsi"
+    setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
+
+on boot && property:persist.vendor.usb.controller.default=*
+    setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
+
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
+
+on charger
+    setprop vendor.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
