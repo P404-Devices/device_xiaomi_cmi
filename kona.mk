@@ -1,7 +1,10 @@
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
-$(call inherit-product, device/qcom/common/common64.mk)
+# Temporary bring-up config (skip dependency checking)
+ALLOW_MISSING_DEPENDENCIES := true
+
+$(call inherit-product, device/qcom/common/minimal_config.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 ###########
