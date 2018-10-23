@@ -40,6 +40,29 @@ TARGET_USES_AOSP := true
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
 
+###########
+#QMAA flags starts
+###########
+#QMAA global flag for modular architecture
+#true means QMAA is enabled for system
+#false means QMAA is disabled for system
+
+TARGET_USES_QMAA := true
+
+#QMAA tech team flag to override global QMAA per tech team
+#true means overriding global QMAA for this tech area
+#false means using global, no override
+
+TARGET_USES_QMAA_OVERRIDE_DISPLAY := false
+TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
+TARGET_USES_QMAA_OVERRIDE_VIDEO   := false
+TARGET_USES_QMAA_OVERRIDE_CAMERA  := false
+TARGET_USES_QMAA_OVERRIDE_GFX     := false
+TARGET_USES_QMAA_OVERRIDE_WFD     := false
+
+###########
+#QMAA flags ends
+###########
 
 ###########
 # Kernel configurations
