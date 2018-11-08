@@ -4,6 +4,11 @@ BOARD_AVB_ENABLE := true
 # Temporary bring-up config (skip dependency checking)
 ALLOW_MISSING_DEPENDENCIES := true
 
+BUILD_BROKEN_PHONY_TARGETS := true
+BUILD_BROKEN_DUP_RULES := true
+TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
+export TEMPORARY_DISABLE_PATH_RESTRICTIONS
+
 $(call inherit-product, device/qcom/common/minimal_config.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
@@ -36,7 +41,6 @@ TARGET_USES_QCOM_BSP := false
 TARGET_KERNEL_VERSION := 4.14
 #Enable llvm support for kernel
 KERNEL_LLVM_SUPPORT := true
-KERNEL_LLVM_BIN := $(ANDROID_BUILD_TOP)/$(lastword $(sort $(wildcard prebuilts/clang/host/linux-x86/clang-4*)))/bin/clang
 
 ###########
 # Target configurations
