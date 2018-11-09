@@ -1,7 +1,4 @@
-# Enable AVB 2.0
-BOARD_AVB_ENABLE := true
-
-# Temporary bring-up config (skip dependency checking)
+# Temporary bring-up config -->
 ALLOW_MISSING_DEPENDENCIES := true
 
 BUILD_BROKEN_PHONY_TARGETS := true
@@ -9,8 +6,16 @@ BUILD_BROKEN_DUP_RULES := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 export TEMPORARY_DISABLE_PATH_RESTRICTIONS
 
+BOARD_AVB_ENABLE := false
+
 $(call inherit-product, device/qcom/common/minimal_config.mk)
+# Temporary bring-up config <--
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
+# Temporary bring-up config -->
+PRODUCT_SUPPORTS_VERITY := false
+# Temporary bring-up config <--
 
 ###########
 # Target naming
