@@ -8,7 +8,12 @@ export TEMPORARY_DISABLE_PATH_RESTRICTIONS
 
 BOARD_AVB_ENABLE := false
 
-$(call inherit-product, device/qcom/common/minimal_config.mk)
+BOARD_HAVE_BLUETOOTH := false
+BOARD_HAVE_QCOM_FM := false
+TARGET_DISABLE_PERF_OPTIMIATIONS := true
+TARGET_DISABLE_DISPLAY := true
+
+$(call inherit-product, device/qcom/common/common64.mk)
 # Temporary bring-up config <--
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -29,8 +34,6 @@ PRODUCT_MODEL := Kona for arm64
 # Initial bring-up flags
 # TODO: Delete once bring-up is complete
 
-# Include only the absolute minimum
-TARGET_MINIMUM_CONFIG := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 TARGET_HAS_LOW_RAM := true
 # Enable flag to support slow emulated device
