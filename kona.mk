@@ -77,6 +77,17 @@ QCOM_BOARD_PLATFORMS += kona
 
 TARGET_USES_QSSI := true
 
+TARGET_USES_QMAA := true
+###QMAA Indicator Start###
+
+#Full QMAA HAL List
+QMAA_HAL_LIST :=
+
+#Indicator for each enabled QMAA HAL for this target. Each tech team locally verified their QMAA HAL and ensure code is updated/merged, then add their HAL module name to QMAA_ENABLED_HAL_MODULES as an QMAA enabling completion indicator
+QMAA_ENABLED_HAL_MODULES :=
+
+###QMAA Indicator End###
+
 #Default vendor image configuration
 ENABLE_VENDOR_IMAGE := true
 
