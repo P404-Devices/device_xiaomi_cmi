@@ -61,3 +61,13 @@ on property:vendor.usb.controller=*
 on charger
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
+
+service vendor.adsprpcd /vendor/bin/adsprpcd
+   class main
+   user root
+   group media
+
+service vendor.cdsprpcd /vendor/bin/cdsprpcd
+   class main
+   user system
+   group system
