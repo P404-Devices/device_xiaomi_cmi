@@ -66,7 +66,7 @@ TARGET_USES_QMAA_OVERRIDE_WFD     := false
 
 ###########
 # Kernel configurations
-TARGET_KERNEL_VERSION := 4.14
+TARGET_KERNEL_VERSION := 4.19
 #Enable llvm support for kernel
 KERNEL_LLVM_SUPPORT := true
 
