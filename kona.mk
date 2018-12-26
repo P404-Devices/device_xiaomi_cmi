@@ -89,6 +89,7 @@ QMAA_HAL_LIST :=
 
 #Indicator for each enabled QMAA HAL for this target. Each tech team locally verified their QMAA HAL and ensure code is updated/merged, then add their HAL module name to QMAA_ENABLED_HAL_MODULES as an QMAA enabling completion indicator
 QMAA_ENABLED_HAL_MODULES :=
+QMAA_ENABLED_HAL_MODULES += sensors
 
 ###QMAA Indicator End###
 
