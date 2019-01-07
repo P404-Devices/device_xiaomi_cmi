@@ -168,6 +168,9 @@ PRODUCT_PACKAGES += $(AUDIO_DLKM)
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
 
+# Audio configuration file
+-include $(TOPDIR)hardware/qcom/audio/configs/kona/kona.mk
+
 #Enable full treble flag
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
