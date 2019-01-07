@@ -87,6 +87,9 @@ KERNEL_LLVM_SUPPORT := true
 
 QCOM_BOARD_PLATFORMS += kona
 
+# VIDC configuration
+MSM_VIDC_TARGET_LIST += kona
+
 TARGET_USES_QSSI := true
 
 TARGET_USES_QMAA := true
