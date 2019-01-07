@@ -50,6 +50,10 @@ TARGET_USES_AOSP := true
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
 
+# system prop for Bluetooth SOC type
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.qcom.bluetooth.soc=hastings
+
 ###########
 #QMAA flags starts
 ###########
