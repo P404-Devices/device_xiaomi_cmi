@@ -18,7 +18,7 @@ BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := true
-TARGET_DISABLE_DISPLAY := true
+TARGET_DISABLE_DISPLAY := false
 
 $(call inherit-product, device/qcom/common/common64.mk)
 # Temporary bring-up config <--
