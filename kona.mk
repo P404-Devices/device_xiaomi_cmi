@@ -76,6 +76,8 @@ TARGET_USES_QMAA_OVERRIDE_DATA    := false
 #QMAA flags ends
 ###########
 
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
 ###########
 # Kernel configurations
 TARGET_KERNEL_VERSION := 4.19
@@ -166,6 +168,16 @@ AUDIO_DLKM += audio_machine_kona.ko
 AUDIO_DLKM += audio_snd_event.ko
 
 PRODUCT_PACKAGES += $(AUDIO_DLKM)
+
+ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
+PRODUCT_COPY_FILES += device/qcom/kona/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
+PRODUCT_COPY_FILES += device/qcom/kona/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/qcom/kona/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml
+PRODUCT_COPY_FILES += device/qcom/kona/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
+
+PRODUCT_COPY_FILES += device/qcom/kona/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
+endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
