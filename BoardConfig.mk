@@ -142,6 +142,8 @@ ADD_RADIO_FILES := true
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+# Enable sensor multi HAL
+USE_SENSOR_MULTI_HAL := true
 
 #################################################################################
 # This is the End of BoardConfig.mk file.
