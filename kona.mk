@@ -183,6 +183,9 @@ PRODUCT_COPY_FILES += device/qcom/kona/media_codecs_vendor_audio.xml:$(TARGET_CO
 PRODUCT_COPY_FILES += device/qcom/kona/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
+# MSM IRQ Balancer configuration file
+PRODUCT_COPY_FILES += device/qcom/kona/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
