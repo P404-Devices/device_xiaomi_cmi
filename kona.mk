@@ -213,6 +213,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
+#ANT+ stack
+PRODUCT_PACKAGES += \
+    libvolumelistener
+
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
