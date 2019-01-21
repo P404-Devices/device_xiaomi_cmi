@@ -36,6 +36,11 @@ PRODUCT_DEVICE := kona
 PRODUCT_BRAND := qti
 PRODUCT_MODEL := Kona for arm64
 
+#----------------------------------------------------------------------
+# wlan specific
+#----------------------------------------------------------------------
+include device/qcom/wlan/kona/wlan.mk
+
 
 TARGET_USES_AOSP := true
 TARGET_USES_AOSP_FOR_AUDIO := false

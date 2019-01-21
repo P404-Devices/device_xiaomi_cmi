@@ -89,7 +89,8 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/audio_tx_macro.ko \
     $(KERNEL_MODULES_OUT)/audio_native.ko \
     $(KERNEL_MODULES_OUT)/audio_machine_kona.ko \
-    $(KERNEL_MODULES_OUT)/audio_snd_event.ko
+    $(KERNEL_MODULES_OUT)/audio_snd_event.ko \
+    $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
@@ -146,6 +147,13 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
+
+#-----------------------------------------------------------------
+# wlan specific
+#-----------------------------------------------------------------
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+include device/qcom/wlan/kona/BoardConfigWlan.mk
+endif
 
 #################################################################################
 # This is the End of BoardConfig.mk file.
