@@ -98,7 +98,6 @@ MSM_VIDC_TARGET_LIST += kona
 
 TARGET_USES_QSSI := true
 
-TARGET_USES_QMAA := true
 ###QMAA Indicator Start###
 
 #Full QMAA HAL List
