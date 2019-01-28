@@ -41,7 +41,6 @@ PRODUCT_MODEL := Kona for arm64
 # Initial bring-up flags
 # TODO: Delete once bring-up is complete
 
-TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 TARGET_HAS_LOW_RAM := true
 # Enable flag to support slow emulated device
 TARGET_PRESIL_SLOW_BOARD := true
