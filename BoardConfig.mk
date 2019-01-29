@@ -70,6 +70,7 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/audio_q6.ko \
     $(KERNEL_MODULES_OUT)/audio_usf.ko \
     $(KERNEL_MODULES_OUT)/audio_pinctrl_wcd.ko \
+    $(KERNEL_MODULES_OUT)/audio_pinctrl_lpi.ko \
     $(KERNEL_MODULES_OUT)/audio_swr.ko \
     $(KERNEL_MODULES_OUT)/audio_wcd_core.ko \
     $(KERNEL_MODULES_OUT)/audio_swr_ctrl.ko \
