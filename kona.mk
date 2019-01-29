@@ -138,6 +138,15 @@ PRODUCT_PACKAGES += update_engine \
 # Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
 
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+  bootctrl.kona \
+  librecovery_updater_msm \
+  libz \
+  libcutils
+
+PRODUCT_PACKAGES += \
+  update_engine_sideload
+
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/kona/framework_manifest.xml
 
 DEVICE_MANIFEST_FILE := device/qcom/kona/manifest.xml
