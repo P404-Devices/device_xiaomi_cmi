@@ -81,6 +81,8 @@ TARGET_USES_QMAA_OVERRIDE_DATA    := false
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+TARGET_DISABLE_QTI_VPP := true
+
 ###########
 # Kernel configurations
 TARGET_KERNEL_VERSION := 4.19
