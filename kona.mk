@@ -136,6 +136,11 @@ PRODUCT_PACKAGES += update_engine \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 
+# QRTR related packages
+PRODUCT_PACKAGES += qrtr-ns
+PRODUCT_PACKAGES += qrtr-lookup
+PRODUCT_PACKAGES += libqrtr
+
 # Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
 
