@@ -59,6 +59,9 @@ on boot
     setprop vendor.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
+#Load WLAN driver
+    insmod /vendor/lib/modules/qca_cld3_wlan.ko
+
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
