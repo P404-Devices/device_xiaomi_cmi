@@ -193,6 +193,8 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/kona/kona.mk
 
+USE_CUSTOM_AUDIO_POLICY := 0
+
 # Video configuration file
 -include $(TOPDIR)hardware/qcom/media/conf_files/kona/kona.mk
 
