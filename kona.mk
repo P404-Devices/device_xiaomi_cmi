@@ -37,14 +37,6 @@ PRODUCT_BRAND := qti
 PRODUCT_MODEL := Kona for arm64
 
 
-###########
-# Initial bring-up flags
-# TODO: Delete once bring-up is complete
-
-TARGET_HAS_LOW_RAM := true
-# Enable flag to support slow emulated device
-TARGET_PRESIL_SLOW_BOARD := true
-
 TARGET_USES_AOSP := true
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
