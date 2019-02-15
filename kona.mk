@@ -67,7 +67,7 @@ TARGET_USES_QMAA := true
 #false means using global, no override
 
 TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
-TARGET_USES_QMAA_OVERRIDE_AUDIO   := false
+TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := false
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := false
 TARGET_USES_QMAA_OVERRIDE_GFX     := false
@@ -197,6 +197,7 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/kona/kona.mk
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/kona/kona.mk
 
 # Video configuration file
 -include $(TOPDIR)hardware/qcom/media/conf_files/kona/kona.mk
