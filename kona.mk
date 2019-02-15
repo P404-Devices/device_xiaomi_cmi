@@ -213,6 +213,11 @@ BOARD_SYSTEMSDK_VERSIONS := 28
 BOARD_VNDK_VERSION := current
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
+KMGK_USE_QTI_SERVICE := true
+
+#Enable KEYMASTER 4.0
+ENABLE_KM_4_0 := true
+
 # Sensor conf files
 PRODUCT_COPY_FILES += \
     device/qcom/kona/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
