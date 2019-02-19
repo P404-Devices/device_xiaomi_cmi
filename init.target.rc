@@ -36,7 +36,7 @@ on init
     start vendor.qseecomd
 
 on fs
-    mount_all /vendor/etc/fstab.qti
+    mount_all /vendor/etc/fstab.qcom
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
