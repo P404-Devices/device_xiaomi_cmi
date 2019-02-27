@@ -104,3 +104,10 @@ endif
 # extra images
 #----------------------------------------------------------------------
 include device/qcom/common/generate_extra_images.mk
+
+#----------------------------------------------------------------------
+# wlan specific
+#----------------------------------------------------------------------
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+include device/qcom/wlan/kona/AndroidBoardWlan.mk
+endif
