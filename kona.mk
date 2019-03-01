@@ -20,7 +20,7 @@ BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := false
 TARGET_DISABLE_DISPLAY := false
 
-$(call inherit-product, device/qcom/common/common64.mk)
+$(call inherit-product, device/qcom/qssi/common64.mk)
 # Temporary bring-up config <--
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
