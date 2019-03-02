@@ -195,7 +195,6 @@ KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
 
 # Audio configuration file
--include $(TOPDIR)hardware/qcom/audio/configs/kona/kona.mk
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/kona/kona.mk
 
 USE_CUSTOM_AUDIO_POLICY := 0
