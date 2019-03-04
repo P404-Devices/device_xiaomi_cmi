@@ -95,9 +95,6 @@ KERNEL_SD_LLVM_SUPPORT := true
 
 QCOM_BOARD_PLATFORMS += kona
 
-# VIDC configuration
-MSM_VIDC_TARGET_LIST += kona
-
 TARGET_USES_QSSI := true
 
 ###QMAA Indicator Start###
@@ -213,9 +210,6 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 
 USE_LIB_PROCESS_GROUP := true
 
-# Video configuration file
--include $(TOPDIR)hardware/qcom/media/conf_files/kona/kona.mk
-
 #Enable full treble flag
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
@@ -255,12 +249,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += telephony-ext
-
-TARGET_DISABLE_DASH := true
-
-ifneq ($(TARGET_DISABLE_DASH), true)
-      PRODUCT_BOOT_JARS += qcmediaplayer
-endif
 
 ###################################################################################
 # This is the End of target.mk file.
