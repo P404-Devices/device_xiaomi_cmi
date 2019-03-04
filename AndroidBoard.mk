@@ -106,11 +106,6 @@ endif
 include device/qcom/common/generate_extra_images.mk
 
 #----------------------------------------------------------------------
-# Transient change for odm partition
-#----------------------------------------------------------------------
-$(shell if [ ! -f $(PRODUCT_OUT)/odm.img ]; then mkdir -p $(PRODUCT_OUT); echo -n x > $(PRODUCT_OUT)/odm.img; fi)
-
-#----------------------------------------------------------------------
 # wlan specific
 #----------------------------------------------------------------------
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
