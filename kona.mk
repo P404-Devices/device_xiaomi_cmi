@@ -245,6 +245,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
+# Fingerprint feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
+
+# system prop for enabling QFS (QTI Fingerprint Solution)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qfp=true
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     libvolumelistener
