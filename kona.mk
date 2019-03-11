@@ -249,6 +249,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libvolumelistener
 
+#Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator@1.2-service
+
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += telephony-ext
