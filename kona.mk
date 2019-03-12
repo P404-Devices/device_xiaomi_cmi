@@ -71,7 +71,7 @@ TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
 TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
 TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
 TARGET_USES_QMAA_OVERRIDE_GFX     := false
-TARGET_USES_QMAA_OVERRIDE_WFD     := false
+TARGET_USES_QMAA_OVERRIDE_WFD     := true
 TARGET_USES_QMAA_OVERRIDE_SENSORS := true
 TARGET_USES_QMAA_OVERRIDE_DATA    := false
 TARGET_USES_QMAA_OVERRIDE_VPP     := false
@@ -263,9 +263,9 @@ ifneq ($(TARGET_DISABLE_DASH), true)
       PRODUCT_BOOT_JARS += qcmediaplayer
 endif
 
-#ifneq ($(strip $(QCPATH)),)
-#    PRODUCT_BOOT_JARS += WfdCommon
-#endif
+ifneq ($(strip $(QCPATH)),)
+   PRODUCT_BOOT_JARS += WfdCommon
+endif
 
 ifneq ($(strip $(QCPATH)),)
     PRODUCT_BOOT_JARS += libprotobuf-java_mls
