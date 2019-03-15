@@ -267,10 +267,6 @@ ifneq ($(strip $(QCPATH)),)
    PRODUCT_BOOT_JARS += WfdCommon
 endif
 
-ifneq ($(strip $(QCPATH)),)
-    PRODUCT_BOOT_JARS += libprotobuf-java_mls
-endif
-
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
