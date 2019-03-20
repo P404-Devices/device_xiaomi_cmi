@@ -211,7 +211,6 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 # Audio configuration file
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/kona/kona.mk
 
-USE_CUSTOM_AUDIO_POLICY := 0
 USE_LIB_PROCESS_GROUP := true
 
 # Video configuration file
