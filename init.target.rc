@@ -112,7 +112,7 @@ service vendor.qseecomd /vendor/bin/qseecomd
 
 service vendor.adsprpcd /vendor/bin/adsprpcd
    class main
-   user root
+   user system
    group media
 
 service vendor.adsprpcd_audiopd /vendor/bin/adsprpcd audiopd
