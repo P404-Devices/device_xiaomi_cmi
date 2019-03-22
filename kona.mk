@@ -262,10 +262,6 @@ ifneq ($(TARGET_DISABLE_DASH), true)
       PRODUCT_BOOT_JARS += qcmediaplayer
 endif
 
-ifneq ($(strip $(QCPATH)),)
-   PRODUCT_BOOT_JARS += WfdCommon
-endif
-
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
