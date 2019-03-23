@@ -1,3 +1,4 @@
+
 # Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -41,10 +42,16 @@ on init
     write /dev/stune/top-app/schedtune.colocate 1
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
+    start logd
     start vendor.qseecomd
+    start keymaster-4-0
+
+on early-fs
+    start vold
 
 on fs
-    mount_all /vendor/etc/fstab.qcom
+    start hwservicemanager
+    mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -54,6 +61,11 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     write /dev/ipa 1
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
