@@ -2,6 +2,8 @@
 #
 # Product-specific compile-time definitions.
 #
+# TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
+BUILD_BROKEN_ENG_DEBUG_TAGS := true
 
 TARGET_BOARD_PLATFORM := kona
 TARGET_BOOTLOADER_BOARD_NAME := msmnile # temporary until Kona is supported by ABL
