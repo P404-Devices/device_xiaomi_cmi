@@ -48,7 +48,7 @@ ifneq ($(AB_OTA_UPDATER),true)
     TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
 endif
 
-TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/qcom/kona/fstab.qcom
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
