@@ -172,3 +172,5 @@ endif
 #################################################################################
 
 BUILD_BROKEN_DUP_RULES := true
+#Disable PHONY target checks for initial bringup
+BUILD_BROKEN_PHONY_TARGETS := true
