@@ -170,3 +170,5 @@ endif
 -include vendor/qcom/defs/board-defs/system/*.mk
 -include vendor/qcom/defs/board-defs/vendor/*.mk
 #################################################################################
+
+BUILD_BROKEN_DUP_RULES := true
