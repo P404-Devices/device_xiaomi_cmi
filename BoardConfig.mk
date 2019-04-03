@@ -15,7 +15,7 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := kryo300
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a75
@@ -170,3 +170,7 @@ endif
 -include vendor/qcom/defs/board-defs/system/*.mk
 -include vendor/qcom/defs/board-defs/vendor/*.mk
 #################################################################################
+
+BUILD_BROKEN_DUP_RULES := true
+#Disable PHONY target checks for initial bringup
+BUILD_BROKEN_PHONY_TARGETS := true
