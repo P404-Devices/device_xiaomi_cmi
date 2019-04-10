@@ -23,7 +23,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
-TARGET_AB_RETRYCOUNT_DISABLE = true
 
 BOARD_PRESIL_BUILD := true
 -include $(QCPATH)/common/kona/BoardConfigVendor.mk
