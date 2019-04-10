@@ -5,6 +5,28 @@ BUILD_BROKEN_PHONY_TARGETS := true
 BUILD_BROKEN_DUP_RULES := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 export TEMPORARY_DISABLE_PATH_RESTRICTIONS
+# For QSSI builds, we should skip building the system image. Instead we build the
+# "non-system" images (that we support).
+
+# TODO: Remove BUILD_KONA_WITH_QSSI conditional for system image once lunch qssi
+#       changes on kona merge.
+ifneq ($(BUILD_KONA_WITH_QSSI),true)
+PRODUCT_BUILD_SYSTEM_IMAGE := true
+else
+PRODUCT_BUILD_SYSTEM_IMAGE := false
+endif
+PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
+PRODUCT_BUILD_VENDOR_IMAGE := true
+PRODUCT_BUILD_PRODUCT_IMAGE := false
+PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
+PRODUCT_BUILD_ODM_IMAGE := false
+PRODUCT_BUILD_CACHE_IMAGE := false
+PRODUCT_BUILD_RAMDISK_IMAGE := true
+PRODUCT_BUILD_USERDATA_IMAGE := true
+
+# Also, since we're going to skip building the system image, we also skip
+# building the OTA package. We'll build this at a later step.
+TARGET_SKIP_OTA_PACKAGE := true
 
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
