@@ -1,5 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(wildcard $(TARGET_PRODUCT_OUT_ROOT)/qssi/system.img),)
+BOARD_PREBUILT_SYSTEMIMAGE ?= $(TARGET_PRODUCT_OUT_ROOT)/qssi/system.img
+endif
 #----------------------------------------------------------------------
 # Host compiler configs
 #----------------------------------------------------------------------
