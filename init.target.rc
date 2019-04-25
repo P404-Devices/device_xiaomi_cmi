@@ -125,6 +125,11 @@ service vendor.cdsprpcd /vendor/bin/cdsprpcd
    user system
    group system
 
+service vendor.lowi /vendor/bin/sscrpcd
+   class core
+   user system
+   group system
+
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
