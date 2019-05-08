@@ -127,8 +127,6 @@ BOARD_FRP_PARTITION_NAME := frp
 # Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
--include hardware/qcom/display/config/kona.mk
-
 PRODUCT_PACKAGES += fs_config_files
 PRODUCT_PACKAGES += gpio-keys.kl
 
