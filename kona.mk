@@ -8,13 +8,7 @@ export TEMPORARY_DISABLE_PATH_RESTRICTIONS
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
 
-# TODO: Remove BUILD_KONA_WITH_QSSI conditional for system image once lunch qssi
-#       changes on kona merge.
-ifneq ($(BUILD_KONA_WITH_QSSI),true)
-PRODUCT_BUILD_SYSTEM_IMAGE := true
-else
 PRODUCT_BUILD_SYSTEM_IMAGE := false
-endif
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
