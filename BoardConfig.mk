@@ -168,8 +168,8 @@ endif
 # Now, Pickup other split Board.mk files:
 #################################################################################
 # TODO: Relocate the system Board.mk files pickup into qssi lunch, once it is up.
--include vendor/qcom/defs/board-defs/system/*.mk
--include vendor/qcom/defs/board-defs/vendor/*.mk
+-include $(sort $(wildcard vendor/qcom/defs/board-defs/system/*.mk))
+-include $(sort $(wildcard vendor/qcom/defs/board-defs/vendor/*.mk))
 #################################################################################
 
 BUILD_BROKEN_DUP_RULES := true
