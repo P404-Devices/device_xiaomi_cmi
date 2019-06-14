@@ -95,7 +95,8 @@ TARGET_USES_RRO := true
 
 # system prop for Bluetooth SOC type
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=hastings
+    vendor.qcom.bluetooth.soc=hastings \
+	ro.sf.lcd_density=560
 
 ###########
 #QMAA flags starts
