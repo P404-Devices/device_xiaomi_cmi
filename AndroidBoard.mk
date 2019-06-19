@@ -61,9 +61,13 @@ LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 ifeq ($(BOARD_DYNAMIC_PARTITION_ENABLE),true)
-LOCAL_SRC_FILES    := fstab_dynamic_partition.qcom
+  ifeq ($(ENABLE_AB), true)
+    LOCAL_SRC_FILES := fstab.qcom
+  else
+    LOCAL_SRC_FILES := fstab_non_AB.qcom
+  endif
 else
-LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+  LOCAL_SRC_FILES   := fstab_legacy.qcom
 endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
