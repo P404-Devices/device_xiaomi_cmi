@@ -30,7 +30,7 @@ BOARD_AVB_ENABLE := true
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
 #ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-BOARD_DYNAMIC_PARTITION_ENABLE ?=true
+BOARD_DYNAMIC_PARTITION_ENABLE ?=false
 #endif
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
