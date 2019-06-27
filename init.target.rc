@@ -43,8 +43,6 @@ on init
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
     start logd
-    start vendor.qseecomd
-    start keymaster-4-0
 
 on early-fs
     start vold
@@ -114,11 +112,6 @@ on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
-
-service vendor.qseecomd /vendor/bin/qseecomd
-    class core
-    user root
-    group root
 
 service vendor.lowi /vendor/bin/sscrpcd
    class core
