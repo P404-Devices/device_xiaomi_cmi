@@ -1,10 +1,14 @@
-# Temporary bring-up config -->
+# Temporary Q config pending cleanup -->
 ALLOW_MISSING_DEPENDENCIES := true
 
 BUILD_BROKEN_PHONY_TARGETS := true
 BUILD_BROKEN_DUP_RULES := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 export TEMPORARY_DISABLE_PATH_RESTRICTIONS
+
+# Default Android A/B configuration
+ENABLE_AB ?= true
+
 # For QSSI builds, we should skip building the system image. Instead we build the
 # "non-system" images (that we support).
 
@@ -14,7 +18,11 @@ PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
 PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := false
+ifeq ($(ENABLE_AB), true)
 PRODUCT_BUILD_CACHE_IMAGE := false
+else
+PRODUCT_BUILD_CACHE_IMAGE := true
+endif
 PRODUCT_BUILD_RAMDISK_IMAGE := true
 PRODUCT_BUILD_USERDATA_IMAGE := true
 
@@ -29,9 +37,7 @@ BOARD_AVB_ENABLE := true
 #####Dynamic partition Handling
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
-#ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 BOARD_DYNAMIC_PARTITION_ENABLE ?=false
-#endif
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 # Enable chain partition for system, to facilitate system-only OTA in Treble.
@@ -40,21 +46,22 @@ BOARD_AVB_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 PRODUCT_BUILD_ODM_IMAGE := false
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_legacy.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 else
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += fastbootd
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_dynamic_partition.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+ifeq ($(ENABLE_AB),true)
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+else
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+endif
 BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 endif
-
-#####Dynamic partition Handling
-
-
 
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
@@ -153,6 +160,7 @@ PRODUCT_PACKAGES += libGLES_android
 PRODUCT_PACKAGES += fs_config_files
 PRODUCT_PACKAGES += gpio-keys.kl
 
+ifeq ($(ENABLE_AB), true)
 # A/B related packages
 PRODUCT_PACKAGES += update_engine \
     update_engine_client \
@@ -162,19 +170,7 @@ PRODUCT_PACKAGES += update_engine \
     android.hardware.boot@1.0-service
 
 PRODUCT_HOST_PACKAGES += \
-    brillo_update_payload \
-    configstore_xmlparser
-
-# QRTR related packages
-PRODUCT_PACKAGES += qrtr-ns
-PRODUCT_PACKAGES += qrtr-lookup
-PRODUCT_PACKAGES += libqrtr
-
-# Context hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
-
+    brillo_update_payload
 
 # Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
@@ -187,6 +183,20 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
+endif
+
+PRODUCT_HOST_PACKAGES += \
+    configstore_xmlparser
+
+# QRTR related packages
+PRODUCT_PACKAGES += qrtr-ns
+PRODUCT_PACKAGES += qrtr-lookup
+PRODUCT_PACKAGES += libqrtr
+
+# Context hub HAL
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-impl.generic \
+    android.hardware.contexthub@1.0-service
 
 # f2fs utilities
 PRODUCT_PACKAGES += \
@@ -214,6 +224,9 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/kona/framework_manifest.xml
 
 DEVICE_MANIFEST_FILE := device/qcom/kona/manifest.xml
+ifeq ($(ENABLE_AB), true)
+DEVICE_MANIFEST_FILE += device/qcom/kona/manifest_ab.xml
+endif
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
 #Audio DLKM

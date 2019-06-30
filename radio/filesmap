@@ -48,6 +48,10 @@ storsec.mbn             /dev/block/bootdevice/by-name/storsec
 imagefv.elf             /dev/block/bootdevice/by-name/ImageFv
 vbmeta.img              /dev/block/bootdevice/by-name/vbmeta
 dtbo.img                /dev/block/bootdevice/by-name/dtbo
+vbmeta_system.img       /dev/block/bootdevice/by-name/vbmeta_system
+multiimgoem.img         /dev/block/bootdevice/by-name/multiimgoem
+multiimgqti.img         /dev/block/bootdevice/by-name/multiimgqti
+vm-linux.img            /dev/block/bootdevice/by-name/vm-linux
 
 # filename + .bak       backup partition
 
@@ -66,6 +70,10 @@ storsec.mbn.bak         /dev/block/bootdevice/by-name/storsecbak
 vbmeta.img.bak          /dev/block/bootdevice/by-name/vbmetabak
 dtbo.img.bak            /dev/block/bootdevice/by-name/dtbobak
 imagefv.elf.bak         /dev/block/bootdevice/by-name/ImageFvbak
+multiimgoem.img.bak     /dev/block/bootdevice/by-name/multiimgoembak
+multiimgqti.img.bak     /dev/block/bootdevice/by-name/multiimgqtibak
+vm-linux.img.bak        /dev/block/bootdevice/by-name/vm-linuxbak
+vbmeta_system.img.bak   /dev/block/bootdevice/by-name/vbmeta_systembak
 
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
