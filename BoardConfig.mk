@@ -181,6 +181,9 @@ USE_SENSOR_MULTI_HAL := true
 # Enable sensor Version V_2
 USE_SENSOR_HAL_VER := 2.0
 
+#flag for qspm compilation
+TARGET_USES_QSPM := true
+
 #-----------------------------------------------------------------
 # wlan specific
 #-----------------------------------------------------------------
