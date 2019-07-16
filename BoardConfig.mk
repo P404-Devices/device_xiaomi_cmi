@@ -122,7 +122,23 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/audio_snd_event.ko \
     $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
     $(KERNEL_MODULES_OUT)/wil6210.ko \
-    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko
+    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
+    $(KERNEL_MODULES_OUT)/br_netfilter.ko \
+    $(KERNEL_MODULES_OUT)/gspca_main.ko \
+    $(KERNEL_MODULES_OUT)/lcd.ko \
+    $(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
+
+# check for for userdebug and eng build variants and install the appropriate modules
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    ifeq (,$(findstring perf_defconfig, $(KERNEL_DEFCONFIG)))
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/atomic64_test.ko
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/lkdtm.ko
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/locktorture.ko
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/rcutorture.ko
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/test_user_copy.ko
+	    BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/torture.ko
+    endif
+endif
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
