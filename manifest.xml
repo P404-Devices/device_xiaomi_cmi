@@ -791,7 +791,17 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!--TuiComm-->
-
+    <!--  Soter service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.soter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!--  Soter service -->
     <!-- Alarm HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
