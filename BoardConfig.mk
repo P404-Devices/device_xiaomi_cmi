@@ -29,17 +29,36 @@ BOARD_PRESIL_BUILD := true
 
 USE_OPENGL_RENDERER := true
 
+#Generate DTBO image
+BOARD_KERNEL_SEPARATED_DTBO := true
+
 ### Dynamic partition Handling
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_ODMIMAGE_PARTITION_SIZE := 67108864
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-TARGET_NO_RECOVERY := true
-BOARD_USES_RECOVERY_AS_BOOT := true
+    ifeq ($(ENABLE_AB), true)
+        TARGET_NO_RECOVERY := true
+        BOARD_USES_RECOVERY_AS_BOOT := true
+    else
+	BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
+        ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+            # Enable DTBO for recovery image
+            BOARD_INCLUDE_RECOVERY_DTBO := true
+        endif
+    endif
 else
 # Define the Dynamic Partition sizes and groups.
-BOARD_SUPER_PARTITION_SIZE := 12884901888
+    ifeq ($(ENABLE_AB), true)
+        BOARD_SUPER_PARTITION_SIZE := 12884901888
+    else
+        BOARD_SUPER_PARTITION_SIZE := 6442450944
+    endif
+    ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+        # Enable DTBO for recovery image
+        BOARD_INCLUDE_RECOVERY_DTBO := true
+    endif
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := vendor odm
@@ -194,8 +213,6 @@ endif
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
 
-#Generate DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
