@@ -59,8 +59,6 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     write /dev/ipa 1
-    # Enable WLAN cold boot calibration
-    write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6390/fs_ready 1
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
@@ -69,6 +67,8 @@ on late-fs
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
+    # Enable WLAN cold boot calibration
+    write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6390/fs_ready 1
 
 on early-boot
     start vendor.sensors
