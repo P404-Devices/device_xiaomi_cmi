@@ -310,7 +310,9 @@ PRODUCT_COPY_FILES += \
 # system prop for enabling QFS (QTI Fingerprint Solution)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qfp=true
-
+#target specific runtime prop for qspm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qspm.enable=true
 #ANT+ stack
 PRODUCT_PACKAGES += \
     libvolumelistener
