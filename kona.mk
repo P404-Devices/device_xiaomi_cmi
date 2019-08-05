@@ -71,6 +71,9 @@ BOARD_HAVE_QCOM_FM := false
 TARGET_DISABLE_PERF_OPTIMIATIONS := false
 TARGET_DISABLE_DISPLAY := false
 
+# privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
+PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
+
 $(call inherit-product, device/qcom/qssi/common64.mk)
 # Temporary bring-up config <--
 
