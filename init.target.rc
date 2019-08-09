@@ -153,7 +153,7 @@ on property:sys.shutdown.requested=*
 on property:vold.decrypt=trigger_restart_framework
    start vendor.cnss_diag
 
-service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
    class main
    user system
    group system wifi inet sdcard_rw media_rw diag
