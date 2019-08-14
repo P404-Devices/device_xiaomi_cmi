@@ -34,7 +34,7 @@ BOARD_AVB_ENABLE := true
 #####Dynamic partition Handling
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
-BOARD_DYNAMIC_PARTITION_ENABLE ?=false
+BOARD_DYNAMIC_PARTITION_ENABLE ?= true
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 # Enable chain partition for system, to facilitate system-only OTA in Treble.
