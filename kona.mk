@@ -30,6 +30,11 @@ TARGET_SKIP_OTA_PACKAGE := true
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
+SHIPPING_API_LEVEL ?= 29
+
+ifeq ($(SHIPPING_API_LEVEL),29)
+PRODUCT_SHIPPING_API_LEVEL := 29
+endif
 
 #####Dynamic partition Handling
 ###
