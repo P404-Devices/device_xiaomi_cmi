@@ -11,7 +11,7 @@ endif
 BUILD_BROKEN_ENG_DEBUG_TAGS := true
 
 TARGET_BOARD_PLATFORM := kona
-TARGET_BOOTLOADER_BOARD_NAME := msmnile # temporary until Kona is supported by ABL
+TARGET_BOOTLOADER_BOARD_NAME := kona
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
