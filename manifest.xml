@@ -903,4 +903,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Camera PostProcessing service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.camera.postproc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPostProcService</name>
+            <instance>camerapostprocservice</instance>
+        </interface>
+    </hal>
 </manifest>
