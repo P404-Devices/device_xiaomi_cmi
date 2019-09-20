@@ -29,11 +29,16 @@ TARGET_SKIP_OTA_PACKAGE := true
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
+SHIPPING_API_LEVEL ?= 29
+
+ifeq ($(SHIPPING_API_LEVEL),29)
+PRODUCT_SHIPPING_API_LEVEL := 29
+endif
 
 #####Dynamic partition Handling
 ###
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
-BOARD_DYNAMIC_PARTITION_ENABLE ?=false
+BOARD_DYNAMIC_PARTITION_ENABLE ?= true
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 # Enable chain partition for system, to facilitate system-only OTA in Treble.
@@ -70,8 +75,17 @@ TARGET_DISABLE_DISPLAY := false
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
+TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, device/qcom/qssi/common64.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
+#Product property overrides to configure the Dalvik heap
+PRODUCT_PROPERTY_OVERRIDES  += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapgrowthlimit=256m
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
 
 ###########
 # Target naming
