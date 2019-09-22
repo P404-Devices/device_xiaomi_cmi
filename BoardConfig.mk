@@ -7,8 +7,6 @@ ifeq ($(SHIPPING_API_LEVEL),29)
 BOARD_SYSTEMSDK_VERSIONS:=29
 endif
 
-# TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
-BUILD_BROKEN_ENG_DEBUG_TAGS := true
 
 TARGET_BOARD_PLATFORM := kona
 TARGET_BOOTLOADER_BOARD_NAME := kona
@@ -251,5 +249,3 @@ endif
 BUILD_BROKEN_DUP_RULES := true
 include device/qcom/sepolicy/SEPolicy.mk
 
-#Disable PHONY target checks for initial bringup
-BUILD_BROKEN_PHONY_TARGETS := true
