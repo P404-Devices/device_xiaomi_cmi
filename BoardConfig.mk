@@ -3,8 +3,13 @@
 # Product-specific compile-time definitions.
 #
 
+ifeq ($(SHIPPING_API_LEVEL),29)
+BOARD_SYSTEMSDK_VERSIONS:=29
+endif
+
+
 TARGET_BOARD_PLATFORM := kona
-TARGET_BOOTLOADER_BOARD_NAME := msmnile # temporary until Kona is supported by ABL
+TARGET_BOOTLOADER_BOARD_NAME := kona
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -145,6 +150,9 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/gspca_main.ko \
     $(KERNEL_MODULES_OUT)/lcd.ko \
     $(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
+    $(KERNEL_MODULES_OUT)/mpq-adapter.ko \
+    $(KERNEL_MODULES_OUT)/mpq-dmx-hw-plugin.ko \
+    $(KERNEL_MODULES_OUT)/tspp.ko
 
 # check for for userdebug and eng build variants and install the appropriate modules
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
@@ -240,3 +248,4 @@ endif
 
 BUILD_BROKEN_DUP_RULES := true
 include device/qcom/sepolicy/SEPolicy.mk
+
