@@ -12,6 +12,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # explicitly list here. Where project corresponds to the vars here
 # in CAPs.
 
+#ANT
+ANT := AntHalService-Soong
+
 #ATRACE_HAL
 ATRACE_HAL := android.hardware.atrace@1.0-service
 
@@ -234,6 +237,7 @@ $(call inherit-product-if-exists, external/llvm/llvm-select.mk)
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PACKAGES += $(ANT)
 PRODUCT_PACKAGES += $(ATRACE_HAL)
 PRODUCT_PACKAGES += $(AUDIO_HAL)
 PRODUCT_PACKAGES += $(BLUETOOTH_HAL)
