@@ -276,6 +276,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IHostapdVendor</name>
             <instance>default</instance>
+            <instance>wigigp2p</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -768,6 +769,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>INetPerfTuner</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- FST manager service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.fstman</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFstManager</name>
             <instance>default</instance>
         </interface>
     </hal>
