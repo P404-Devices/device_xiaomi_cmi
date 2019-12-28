@@ -276,7 +276,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IHostapdVendor</name>
             <instance>default</instance>
-            <instance>wigigp2p</instance>
         </interface>
     </hal>
     <hal format="hidl">
