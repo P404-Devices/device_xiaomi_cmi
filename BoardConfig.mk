@@ -54,7 +54,11 @@ AB_OTA_PARTITIONS ?= boot vendor dtbo vbmeta
 else
 # Define the Dynamic Partition sizes and groups.
     ifeq ($(ENABLE_AB), true)
-        BOARD_SUPER_PARTITION_SIZE := 12884901888
+        ifeq ($(ENABLE_VIRTUAL_AB), true)
+            BOARD_SUPER_PARTITION_SIZE := 6442450944
+        else
+            BOARD_SUPER_PARTITION_SIZE := 12884901888
+        endif
     else
         BOARD_SUPER_PARTITION_SIZE := 6442450944
     endif
