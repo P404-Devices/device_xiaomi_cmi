@@ -442,6 +442,17 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
 
+   <!-- deviceInfo HAL -->
+   <hal format="hidl">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+           <transport>hwbinder</transport>
+           <version>1.0</version>
+           <interface>
+               <name>IDeviceInfo</name>
+               <instance>deviceinfo</instance>
+           </interface>
+    </hal>
+
    <!-- IMS RTP Service -->
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
@@ -496,7 +507,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
        <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -628,15 +639,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.bluetooth_dun</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothDunServer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
 
     <!-- gnss -->
     <hal format="hidl">
@@ -668,15 +670,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!--ANT-->
-    <hal format="hidl">
-        <name>com.qualcomm.qti.ant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAntHci</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
@@ -903,6 +896,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IPostProcService</name>
             <instance>camerapostprocservice</instance>
+        </interface>
+    </hal>
+    <!-- eMBMS HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEmbms</name>
+            <instance>embmsslServer0</instance>
         </interface>
     </hal>
 </manifest>
