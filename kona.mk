@@ -81,7 +81,7 @@ TARGET_DISABLE_DISPLAY := false
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
 TARGET_DEFINES_DALVIK_HEAP := true
-$(call inherit-product, device/qcom/vendor-common/common64.mk)
+$(call inherit-product, device/qcom/qssi/common64.mk)
 
 #Product property overrides to configure the Dalvik heap
 PRODUCT_PROPERTY_OVERRIDES  += \
