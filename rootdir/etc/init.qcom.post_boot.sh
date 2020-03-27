@@ -383,24 +383,22 @@ function configure_read_ahead_kb_values() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
+    dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
+
     # Set 128 for <= 3GB &
     # set 512 for >= 4GB targets.
     if [ $MemTotal -le 3145728 ]; then
         echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0/queue/read_ahead_kb
         echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-0/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-1/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-2/queue/read_ahead_kb
+        for dm in $dmpts; do
+            echo 128 > $dm
+        done
     else
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0/queue/read_ahead_kb
         echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-0/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-1/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-2/queue/read_ahead_kb
+        for dm in $dmpts; do
+            echo 512 > $dm
+        done
     fi
 }
 
@@ -3424,7 +3422,7 @@ case "$target" in
 
     # colocation v3 settings
     echo 51 > /proc/sys/kernel/sched_min_task_util_for_boost
-    echo 51 > /proc/sys/kernel/sched_min_task_util_for_colocation
+    echo 35 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
     # Enable conservative pl
     echo 1 > /proc/sys/kernel/sched_conservative_pl
@@ -3434,6 +3432,19 @@ case "$target" in
 
     # Set Memory parameters
     configure_memory_parameters
+
+    if [ `cat /sys/devices/soc0/revision` == "2.0" ]; then
+         # r2.0 related changes
+         echo "0:1075200" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+         echo 610000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
+         echo 1075200 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
+         echo 1152000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
+         echo 1401600 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
+         echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+         echo 652800 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+         echo 806400 > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
+         echo 83 > /proc/sys/kernel/sched_asym_cap_sibling_freq_match_pct
+    fi
 
     # Enable bus-dcvs
     for device in /sys/devices/platform/soc
@@ -4724,7 +4735,7 @@ case "$target" in
 	    for memlat in $device/*qcom,devfreq-l3/*cpu*-lat/devfreq/*cpu*-lat
 	    do
 		echo "mem_latency" > $memlat/governor
-		echo 10 > $memlat/polling_interval
+		echo 8 > $memlat/polling_interval
 		echo 400 > $memlat/mem_latency/ratio_ceil
 	    done
 
@@ -4738,7 +4749,7 @@ case "$target" in
 	    for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
 	    do
 		echo "mem_latency" > $memlat/governor
-		echo 10 > $memlat/polling_interval
+		echo 8 > $memlat/polling_interval
 		echo 400 > $memlat/mem_latency/ratio_ceil
 	    done
 
@@ -4746,7 +4757,7 @@ case "$target" in
 	    for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
 	    do
 		echo "compute" > $latfloor/governor
-		echo 10 > $latfloor/polling_interval
+		echo 8 > $latfloor/polling_interval
 	    done
 
 	    #Gold L3 ratio ceil
