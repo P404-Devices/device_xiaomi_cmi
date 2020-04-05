@@ -157,7 +157,6 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
     $(KERNEL_MODULES_OUT)/mpq-adapter.ko \
     $(KERNEL_MODULES_OUT)/mpq-dmx-hw-plugin.ko \
-    $(KERNEL_MODULES_OUT)/tspp.ko
 
 # check for for userdebug and eng build variants and install the appropriate modules
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
