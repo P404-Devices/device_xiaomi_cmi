@@ -920,4 +920,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>qccvndhal</instance>
         </interface>
     </hal>
+    <!-- SPU service-->
+    <hal format="hidl">
+        <name>vendor.qti.spu</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISPUManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
