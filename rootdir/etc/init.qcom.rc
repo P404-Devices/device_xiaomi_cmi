@@ -44,6 +44,7 @@ on early-init
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_reg
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dbgbus
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_vbif_dbgbus
+    chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dsi_dbgbus
 
     # Change ownership of sw_sync node
     chown system graphics /sys/kernel/debug/sync/sw_sync
@@ -475,6 +476,11 @@ on property:ro.bluetooth.ftm_enabled=true
 
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
+
+on property:vendor.media.target_variant=*
+    setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
+    setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
+    setprop ro.media.xml_variant.profiles ${vendor.media.target_variant}
 
 service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core

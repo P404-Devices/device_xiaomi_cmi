@@ -46,8 +46,6 @@ else
     soc_hwver=`cat /sys/devices/system/soc/soc0/platform_version` 2> /dev/null
 fi
 
-setprop ro.vendor.qti.soc $soc_hwid
-
 if [ -f /sys/class/drm/card0-DSI-1/modes ]; then
     echo "detect" > /sys/class/drm/card0-DSI-1/status
     mode_file=/sys/class/drm/card0-DSI-1/modes
@@ -313,6 +311,7 @@ case "$target" in
     "kona")
         case "$soc_hwplatform" in
             *)
+                setprop vendor.media.target_variant "_kona"
                 if [ $fb_width -le 1600 ]; then
                     setprop vendor.display.lcd_density 560
                 else
