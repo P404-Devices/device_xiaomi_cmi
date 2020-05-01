@@ -1,5 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 #----------------------------------------------------------------------
 # Host compiler configs
 #----------------------------------------------------------------------
@@ -48,9 +51,17 @@ LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 ifeq ($(BOARD_DYNAMIC_PARTITION_ENABLE),true)
   ifeq ($(ENABLE_AB), true)
-    LOCAL_SRC_FILES := fstab.qcom
+    ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
+      LOCAL_SRC_FILES := fstab.qcom
+    else
+      LOCAL_SRC_FILES := fstab_noSysext.qcom
+    endif
   else
-    LOCAL_SRC_FILES := fstab_non_AB.qcom
+    ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
+      LOCAL_SRC_FILES := fstab_non_AB.qcom
+    else
+      LOCAL_SRC_FILES := fstab_non_AB_noSysext.qcom
+    endif
   endif
 else
   LOCAL_SRC_FILES   := fstab_legacy.qcom

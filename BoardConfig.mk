@@ -3,6 +3,9 @@
 # Product-specific compile-time definitions.
 #
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 ifeq ($(SHIPPING_API_LEVEL),29)
 BOARD_SYSTEMSDK_VERSIONS:=29
 endif
@@ -88,10 +91,18 @@ AB_OTA_UPDATER := true
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery_legacy.fstab
 else
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery.fstab
+else
+TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery_noSysext.fstab
+endif
 endif
 else
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery_non_AB.fstab
+else
+TARGET_RECOVERY_FSTAB := device/qcom/kona/recovery_non_AB_noSysext.fstab
+endif
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 endif

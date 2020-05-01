@@ -790,7 +790,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- SCVE Panorama hal services -->
+    <!-- SCVE Panorama hal services
     <hal format="hidl">
         <name>vendor.qti.hardware.scve.panorama</name>
         <transport>hwbinder</transport>
@@ -812,7 +812,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IObjectTracker</name>
             <instance>objectTracker</instance>
         </interface>
-    </hal>
+    </hal> -->
     <!-- System Helper HAL Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.systemhelper</name>
