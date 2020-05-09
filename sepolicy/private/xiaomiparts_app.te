@@ -20,3 +20,7 @@ allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
 
 allow xiaomiparts_app sysfs_leds:dir search;
 allow xiaomiparts_app sysfs_leds:file rw_file_perms;
+
+allow xiaomiparts_app {
+  sysfs_thermal
+}:{ file lnk_file } rw_file_perms;
