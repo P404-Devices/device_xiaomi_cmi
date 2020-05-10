@@ -162,7 +162,6 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
     $(KERNEL_MODULES_OUT)/wil6210.ko \
     $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
-    $(KERNEL_MODULES_OUT)/br_netfilter.ko \
     $(KERNEL_MODULES_OUT)/gspca_main.ko \
     $(KERNEL_MODULES_OUT)/lcd.ko \
     $(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
