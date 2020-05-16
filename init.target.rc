@@ -1,5 +1,5 @@
 
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -160,3 +160,12 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    oneshot
 
+service dcvs-sh /vendor/bin/init.qti.dcvs.sh
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:vendor.dcvs.prop=1
+   start dcvs-sh
