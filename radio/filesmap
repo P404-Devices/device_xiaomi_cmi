@@ -67,13 +67,10 @@ abl.elf.bak             /dev/block/bootdevice/by-name/ablbak
 devcfg.mbn.bak          /dev/block/bootdevice/by-name/devcfgbak
 qupv3fw.elf.bak         /dev/block/bootdevice/by-name/qupfwbak
 storsec.mbn.bak         /dev/block/bootdevice/by-name/storsecbak
-vbmeta.img.bak          /dev/block/bootdevice/by-name/vbmetabak
-dtbo.img.bak            /dev/block/bootdevice/by-name/dtbobak
 imagefv.elf.bak         /dev/block/bootdevice/by-name/ImageFvbak
 multiimgoem.img.bak     /dev/block/bootdevice/by-name/multiimgoembak
 multiimgqti.img.bak     /dev/block/bootdevice/by-name/multiimgqtibak
 vm-linux.img.bak        /dev/block/bootdevice/by-name/vm-linuxbak
-vbmeta_system.img.bak   /dev/block/bootdevice/by-name/vbmeta_systembak
 
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
