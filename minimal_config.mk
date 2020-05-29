@@ -42,6 +42,7 @@ INIT += init.qti.dcvs.sh
 INIT += init.qcom.factory.rc
 INIT += init.qcom.rc
 INIT += init.qcom.usb.rc
+INIT += init.safailnet.rc
 INIT += init.target.rc
 INIT += fstab.qcom
 INIT += ueventd.qcom.rc
