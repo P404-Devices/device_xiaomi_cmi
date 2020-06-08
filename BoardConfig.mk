@@ -187,6 +187,7 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     endif
 endif
 
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
