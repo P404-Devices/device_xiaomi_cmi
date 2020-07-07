@@ -166,6 +166,9 @@ NFC += vendor.nxp.hardware.nfc@2.0
 NFC += vendor.nxp.hardware.nfc@1.1.vendor
 NFC += vendor.nxp.hardware.nfc@2.0.vendor
 
+#POWERSHARE
+POWERSHARE := vendor.lineage.powershare@1.0-service.xiaomi_kona
+
 #QMI
 QMI := libjson
 
@@ -256,6 +259,7 @@ PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(NET)
 PRODUCT_PACKAGES += $(NFC)
+PRODUCT_PACKAGES += $(POWERSHARE)
 PRODUCT_PACKAGES += $(QMI)
 PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
 PRODUCT_PACKAGES += $(RIL)
