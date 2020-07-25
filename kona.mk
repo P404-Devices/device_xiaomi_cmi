@@ -186,10 +186,6 @@ PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
 PRODUCT_PACKAGES += libqrtr
 
-# Context hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
 
 # f2fs utilities
 PRODUCT_PACKAGES += \
