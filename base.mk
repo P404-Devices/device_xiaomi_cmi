@@ -110,6 +110,9 @@ NQ_NFC += Tag
 NQ_NFC += com.android.nfc_extras
 PRODUCT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=nqx.default
 
+#Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 PROTOBUF := libprotobuf-cpp-full
 
 #STK
