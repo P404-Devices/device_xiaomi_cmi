@@ -130,6 +130,8 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
 
 # Bluetooth
+BOARD_HAVE_QCOM_FM := false
+
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     com.dsi.ant@1.0.vendor \
