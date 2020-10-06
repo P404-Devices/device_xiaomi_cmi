@@ -74,6 +74,7 @@ CAMERA += libstdc++.vendor
 DATA_OS := librmnetctl
 
 #DISPLAY
+DISPLAY += disable_configstore
 DISPLAY += libtinyxml
 
 #DRM
