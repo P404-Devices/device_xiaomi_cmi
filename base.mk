@@ -883,7 +883,7 @@ PRODUCT_PACKAGES := \
     QtiDialer
 
 ifeq ($(TARGET_HAS_LOW_RAM),true)
-    DELAUN := Launcher3Go
+    DELAUN := Launcher3QuickStepGo
 else
     # Live Wallpapers
     PRODUCT_PACKAGES += \
@@ -1063,6 +1063,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
     device/qcom/common/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
 
 ifneq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS),true)
@@ -1217,6 +1220,9 @@ PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
 PRODUCT_PACKAGES += libqti_vndfwk_detect
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
 PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
+
+PRODUCT_PACKAGES += android.hardware.drm@1.3-service.widevine
+PRODUCT_PACKAGES += android.hardware.drm@1.3-service.clearkey
 
 #soong namespace for qssi vs vendor differentiation
 SOONG_CONFIG_NAMESPACES += qssi_vs_vendor

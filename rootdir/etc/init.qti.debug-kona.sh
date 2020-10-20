@@ -766,6 +766,7 @@ config_kona_dcc_gpu()
     echo 0x3D9109C > $DCC_PATH/config
     echo 0x3D91078 > $DCC_PATH/config
     echo 0x3D91054 > $DCC_PATH/config
+    echo 0x3D91534 > $DCC_PATH/config
 }
 
 config_kona_dcc_lpm_pcu()
