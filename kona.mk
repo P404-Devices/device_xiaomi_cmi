@@ -306,6 +306,10 @@ PRODUCT_PACKAGES += init.qti.dcvs.sh
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
 
+# Target specific Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q8250-19134-1
+
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
 ###################################################################################
 # This is the End of target.mk file.
