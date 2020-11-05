@@ -1344,7 +1344,7 @@ enable_kona_dcc_config()
     echo 1 > /sys/bus/coresight/devices/coresight-tpdm-dcc/enable_source
     echo 3 > $DCC_PATH/curr_list
     echo cap > $DCC_PATH/func_type
-    echo atb > $DCC_PATH/data_sink
+    echo sram > $DCC_PATH/data_sink
     kona_dcc_async_package
     config_kona_dcc_lpm
     config_kona_dcc_sys_agnoc_error
