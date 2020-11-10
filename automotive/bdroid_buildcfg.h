@@ -41,6 +41,9 @@
 /* Write 128bit UUID to EIR when a service based on RFCOMM channel is created. */
 #define BTA_EIR_SUPPORT_128BIT_UUID TRUE
 
+/* Disable timer interval (in milliseconds). If not set, the timer is 5000ms (i.e. 5sec) */
+#define BTA_DM_DISABLE_TIMER_MS 200
+
 /*
 * Change CoD for Auto car-kit
 * {SERVICE_CLASS, MAJOR_CLASS, MINOR_CLASS}
