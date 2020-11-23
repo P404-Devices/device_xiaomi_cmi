@@ -203,6 +203,8 @@ ifneq ($(GKI_KERNEL_OUT),)
 	rm -rf $(TARGET_OUT_INTERMEDIATES)/tmp_$(local_module)
 	touch $@
 endif
+endif
+endif
 
 # Once the KBUILD_OPTIONS variable has been used for the target
 # that's specific to the LOCAL_PATH, clear it. If this isn't done,
@@ -211,6 +213,4 @@ endif
 # which would require a change to build/core.
 KBUILD_OPTIONS :=
 LOCAL_ADDITIONAL_DEPENDENCIES :=
-endif
 KBUILD_OPTIONS_GKI :=
-endif

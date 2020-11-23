@@ -304,6 +304,74 @@ config_lito_dcc_gemnoc()
     echo 0x969813c > $DCC_PATH/config
     #GemNOC for lito end
 }
+
+config_lito_dcc_gpu()
+{
+    #GCC
+    echo 0x171004 > $DCC_PATH/config
+    echo 0x171008 > $DCC_PATH/config
+    echo 0x17100C > $DCC_PATH/config
+    echo 0x171014 > $DCC_PATH/config
+    echo 0x171018 > $DCC_PATH/config
+    echo 0x171154 > $DCC_PATH/config
+    echo 0x17A04C > $DCC_PATH/config
+    echo 0x17B000 > $DCC_PATH/config
+    echo 0x17B03C > $DCC_PATH/config
+    echo 0x17C000 > $DCC_PATH/config
+    echo 0x17C03C > $DCC_PATH/config
+    echo 0x17D000 > $DCC_PATH/config
+    echo 0x17D03C > $DCC_PATH/config
+    echo 0x17E000 > $DCC_PATH/config
+    echo 0x17E03C > $DCC_PATH/config
+    echo 0x187000 > $DCC_PATH/config
+    echo 0x18703C > $DCC_PATH/config
+    echo 0x119000 > $DCC_PATH/config
+    echo 0x11903C > $DCC_PATH/config
+
+    #GPUCC
+    echo 0x3D91004 > $DCC_PATH/config
+    echo 0x3D9100C > $DCC_PATH/config
+    echo 0x3D91010 > $DCC_PATH/config
+    echo 0x3D91014 > $DCC_PATH/config
+    echo 0x3D91054 > $DCC_PATH/config
+    echo 0x3D91058 > $DCC_PATH/config
+    echo 0x3D9105C > $DCC_PATH/config
+    echo 0x3D91060 > $DCC_PATH/config
+    echo 0x3D91064 > $DCC_PATH/config
+    echo 0x3D9106C > $DCC_PATH/config
+    echo 0x3D91070 > $DCC_PATH/config
+    echo 0x3D91074 > $DCC_PATH/config
+    echo 0x3D91078 > $DCC_PATH/config
+    echo 0x3D9107C > $DCC_PATH/config
+    echo 0x3D91080 > $DCC_PATH/config
+    echo 0x3D91084 > $DCC_PATH/config
+    echo 0x3D91088 > $DCC_PATH/config
+    echo 0x3D9108C > $DCC_PATH/config
+    echo 0x3D91090 > $DCC_PATH/config
+    echo 0x3D91094 > $DCC_PATH/config
+    echo 0x3D91098 > $DCC_PATH/config
+    echo 0x3D9109C > $DCC_PATH/config
+    echo 0x3D910A4 > $DCC_PATH/config
+    echo 0x3D910A8 > $DCC_PATH/config
+    echo 0x3D910F0 > $DCC_PATH/config
+    echo 0x3D910F4 > $DCC_PATH/config
+    echo 0x3D91100 > $DCC_PATH/config
+    echo 0x3D9110C > $DCC_PATH/config
+    echo 0x3D91118 > $DCC_PATH/config
+    echo 0x3D91164 > $DCC_PATH/config
+    echo 0x3D91168 > $DCC_PATH/config
+    echo 0x3D91534 > $DCC_PATH/config
+    echo 0x3D92000 > $DCC_PATH/config
+    echo 0x3D92004 > $DCC_PATH/config
+    echo 0x3D93000 > $DCC_PATH/config
+    echo 0x3D93004 > $DCC_PATH/config
+    echo 0x3D95000 > $DCC_PATH/config
+    echo 0x3D95004 > $DCC_PATH/config
+    echo 0x3D96000 > $DCC_PATH/config
+    echo 0x3D96004 > $DCC_PATH/config
+    echo 0x3D97000 > $DCC_PATH/config
+    echo 0x3D97004 > $DCC_PATH/config
+}
 config_lito_dcc_lpm()
 {
     #PCU Register
@@ -2823,6 +2891,7 @@ enable_lito_dcc_config()
     config_lito_dcc_osm
     config_lito_dcc_gemnoc
     config_lito_dcc_noc
+    config_lito_dcc_gpu
     config_lito_dcc_gcc
     config_lito_dcc_pimem
     config_lito_dcc_ddr

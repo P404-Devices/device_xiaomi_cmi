@@ -892,12 +892,12 @@ else
             VisualizationWallpapers
 
     DELAUN := Launcher3
-endif
 
-#servicetracker HAL
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2-impl \
-    vendor.qti.hardware.servicetracker@1.2-service
+    #servicetracker HAL
+    PRODUCT_PACKAGES += \
+            vendor.qti.hardware.servicetracker@1.2-impl \
+            vendor.qti.hardware.servicetracker@1.2-service
+endif
 
 PRODUCT_PACKAGES += $(ALSA_HARDWARE)
 PRODUCT_PACKAGES += $(ALSA_UCM)
@@ -1166,9 +1166,6 @@ ifeq ($(TARGET_USES_QCOM_BSP_ATEL),true)
     PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
 endif
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    vendor.usb.diag.func.name=diag
-
 # VNDK-SP:
 PRODUCT_PACKAGES += \
     vndk-sp \
@@ -1213,13 +1210,15 @@ PRODUCT_PACKAGES_DEBUG += \
 
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
-PRODUCT_PACKAGES += android.hardware.health@2.0-service
 
 # framework detect libs
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
 PRODUCT_PACKAGES += libqti_vndfwk_detect
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
 PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
+
+# vndservicemanager
+PRODUCT_PACKAGES += vndservicemanager
 
 PRODUCT_PACKAGES += android.hardware.drm@1.3-service.widevine
 PRODUCT_PACKAGES += android.hardware.drm@1.3-service.clearkey
