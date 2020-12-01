@@ -2575,9 +2575,16 @@ case "$coresight_config" in
                 setprop ro.dbg.coresight.stm_cfg_done 1
             ;;
             "bengal")
-                echo "Enabling DCC/STM/Debug events for bengal"
-                enable_bengal_debug
-                setprop ro.dbg.coresight.stm_cfg_done 1
+                soc_id=`cat /sys/devices/soc0/soc_id`
+                if [ "$soc_id" == "473" || "$soc_id" == "474" ]; then
+                    echo "Enabling DCC/STM/Debug events for scuba"
+                    enable_scuba_debug
+                    setprop ro.dbg.coresight.stm_cfg_done 1
+                else
+                    echo "Enabling DCC/STM/Debug events for bengal"
+                    enable_bengal_debug
+                    setprop ro.dbg.coresight.stm_cfg_done 1
+                fi
             ;;
             *)
                 echo "Invalid target"
