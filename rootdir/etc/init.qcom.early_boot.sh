@@ -336,6 +336,10 @@ case "$target" in
                     setprop vendor.media.target.version 3
                 fi
                 ;;
+            476)
+                # Fraser soc_id 476
+                setprop vendor.display.enable_qsync_idle 1
+                ;;
         esac
         ;;
     "bengal")

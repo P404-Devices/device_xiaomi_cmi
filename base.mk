@@ -1166,6 +1166,9 @@ ifeq ($(TARGET_USES_QCOM_BSP_ATEL),true)
     PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
 endif
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    vendor.usb.diag.func.name=diag
+
 # VNDK-SP:
 PRODUCT_PACKAGES += \
     vndk-sp \
@@ -1219,9 +1222,6 @@ PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
 
 # vndservicemanager
 PRODUCT_PACKAGES += vndservicemanager
-
-PRODUCT_PACKAGES += android.hardware.drm@1.3-service.widevine
-PRODUCT_PACKAGES += android.hardware.drm@1.3-service.clearkey
 
 #soong namespace for qssi vs vendor differentiation
 SOONG_CONFIG_NAMESPACES += qssi_vs_vendor
