@@ -105,9 +105,6 @@ on property:vendor.display.lcd_density=640
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
-on property:vendor.usb.controller=*
-    setprop sys.usb.controller ${vendor.usb.controller}
-
 on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
