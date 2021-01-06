@@ -748,6 +748,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ITrustedInput</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::ITrustedInput/default</fqname>
+        <fqname>@1.1::ITrustedUI/default</fqname>
     </hal>
     <!-- BluetoothSar service-->
     <hal format="hidl">
