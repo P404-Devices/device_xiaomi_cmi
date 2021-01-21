@@ -239,6 +239,9 @@ on post-fs-data
     # Change lm related dirs
     mkdir /data/vendor/lm 0700 root root
 
+    # Create directory used by powermodule
+    mkdir /data/vendor/pwr 0700 root root
+
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
 
@@ -493,6 +496,9 @@ on property:persist.debug.trace=1
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
+on property:vendor.netflix.bsp_rev=*
+    setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
+
 on property:vendor.media.target_variant=*
     setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
@@ -538,6 +544,11 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 #   group wifi inet keystore
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.3::ISupplicant default
+    interface vendor.qti.hardware.wifi.supplicant@2.0::ISupplicantVendor default
+    interface vendor.qti.hardware.wifi.supplicant@2.1::ISupplicantVendor default
+    interface vendor.qti.hardware.wifi.supplicant@2.2::ISupplicantVendor default
     class main
     socket vendor_wpa_wlan0 dgram 660 wifi wifi
     disabled
