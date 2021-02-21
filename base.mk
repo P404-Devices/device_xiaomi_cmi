@@ -81,6 +81,9 @@ DRM += android.hardware.drm@1.3-service.clearkey
 #FASTBOOTD
 FASTBOOTD += fastbootd
 
+#FINGERPRINT
+FINGERPRINT := android.hardware.biometrics.fingerprint@2.1-service.xiaomi_cmi
+
 #FOD
 FOD := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cmi
 
@@ -255,6 +258,7 @@ PRODUCT_PACKAGES += $(DATA_OS)
 PRODUCT_PACKAGES += $(DISPLAY)
 PRODUCT_PACKAGES += $(DRM)
 PRODUCT_PACKAGES += $(FASTBOOTD)
+PRODUCT_PACKAGES += $(FINGERPRINT)
 PRODUCT_PACKAGES += $(FOD)
 PRODUCT_PACKAGES += $(HEALTH)
 PRODUCT_PACKAGES += $(HOSTAPD)
