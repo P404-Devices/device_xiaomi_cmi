@@ -286,17 +286,10 @@ HOSTAPD += hostapd.accept
 I420CC := libI420colorconvert
 
 #INIT
-INIT := init.qcom.composition_type.sh
-INIT += init.target.8x25.sh
-INIT += init.qcom.mdm_links.sh
-INIT += init.qcom.modem_links.sh
-INIT += init.qcom.sensor.sh
 INIT += init.target.rc
-INIT += init.qti.ims.sh
 INIT += init.qcom.coex.sh
 INIT += init.qcom.early_boot.sh
 INIT += init.qcom.post_boot.sh
-INIT += init.qcom.syspart_fixup.sh
 INIT += init.qcom.rc
 INIT += init.recovery.qcom.rc
 INIT += init.qcom.factory.rc
@@ -304,32 +297,14 @@ INIT += init.qcom.sdio.sh
 INIT += init.qcom.sh
 INIT += init.qcom.class_core.sh
 INIT += init.class_main.sh
-INIT += init.qcom.wifi.sh
-INIT += vold.fstab
-INIT += init.qcom.ril.path.sh
 INIT += init.qcom.usb.rc
-INIT += init.msm.usb.configfs.rc
 INIT += init.qcom.usb.sh
-INIT += usf_post_boot.sh
 INIT += init.qcom.efs.sync.sh
 INIT += ueventd.qcom.rc
 INIT += qca6234-service.sh
-INIT += ssr_setup
-INIT += enable_swap.sh
 INIT += init.mdm.sh
 INIT += fstab.qcom
-INIT += fstab.qti
-INIT += fstab.default
-INIT += fstab.emmc
 INIT += init.qcom.sensors.sh
-INIT += init.qcom.crashdata.sh
-INIT += init.qcom.vendor.rc
-INIT += init.target.vendor.rc
-ifeq ($(strip $(TARGET_BOARD_AUTO)),true)
-ifneq ($(strip $(ENABLE_HYP)),true)
-INIT += init.qti.can.sh
-endif
-endif
 
 #IPROUTE2
 IPROUTE2 := ip
@@ -373,7 +348,6 @@ KEYPAD += cyttsp-i2c.kl
 KEYPAD += ft5x06_ts.kl
 KEYPAD += ffa-keypad.kl
 KEYPAD += fluid-keypad.kl
-KEYPAD += gpio-keys.kl
 KEYPAD += qpnp_pon.kl
 KEYPAD += keypad_8960.kl
 KEYPAD += keypad_8960_liquid.kl
@@ -832,7 +806,6 @@ CRDA := crda
 CRDA += regdbdump
 CRDA += regulatory.bin
 CRDA += linville.key.pub.pem
-CRDA += init.crda.sh
 
 #WLAN
 WLAN := prima_wlan.ko
@@ -845,63 +818,6 @@ FSTMAN += fstman.ini
 
 #FD_LEAK
 FD_LEAK := libc_leak_detector
-
-ifneq ($(TARGET_HAS_LOW_RAM),true)
-ifneq ($(TARGET_SUPPORTS_ANDROID_WEAR),true)
-TELEPHONY_DBG := NrNetworkSettingApp
-endif
-endif
-
-PRODUCT_PACKAGES := \
-    AccountAndSyncSettings \
-    DeskClock \
-    AlarmProvider \
-    Calculator \
-    Calendar \
-    Camera \
-    CellBroadcastReceiver \
-    CertInstaller \
-    DrmProvider \
-    Email \
-    Gallery2 \
-    LatinIME \
-    Music \
-    netutils-wrapper-1.0 \
-    Phone \
-    Provision \
-    Protips \
-    QuickSearchBox \
-    Settings \
-    Sync \
-    SystemUI \
-    Updater \
-    CalendarProvider \
-    SyncProvider \
-    SoundRecorder \
-    IM \
-    VoiceDialer \
-    SnapdragonGallery \
-    SnapdragonMusic \
-    VideoEditor \
-    SnapdragonLauncher \
-    QtiDialer
-
-ifeq ($(TARGET_HAS_LOW_RAM),true)
-    DELAUN := Launcher3QuickStepGo
-else
-    # Live Wallpapers
-    PRODUCT_PACKAGES += \
-            LiveWallpapers \
-            LiveWallpapersPicker \
-            VisualizationWallpapers
-
-    DELAUN := Launcher3
-
-    #servicetracker HAL
-    PRODUCT_PACKAGES += \
-            vendor.qti.hardware.servicetracker@1.2-impl \
-            vendor.qti.hardware.servicetracker@1.2-service
-endif
 
 PRODUCT_PACKAGES += $(ALSA_HARDWARE)
 PRODUCT_PACKAGES += $(ALSA_UCM)
@@ -1059,7 +975,7 @@ endif
 
 # gps/location secuity configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/common/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+    device/xiaomi/umi/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 #copy codecs_xxx.xml to (TARGET_COPY_OUT_VENDOR)/etc/
 PRODUCT_COPY_FILES += \
@@ -1070,12 +986,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
-    device/qcom/common/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    device/xiaomi/umi/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
 
 ifneq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS),true)
 PRODUCT_COPY_FILES += \
-    device/qcom/common/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    device/qcom/common/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+    device/xiaomi/umi/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    device/xiaomi/umi/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 endif
 
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
@@ -1091,9 +1007,6 @@ ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml
 endif
-
-# include additional build utilities
--include device/qcom/common/utils.mk
 
 # Copy the vulkan feature level file.
 # Targets listed in VULKAN_FEATURE_LEVEL_0_TARGETS_LIST supports only vulkan feature level 0.
@@ -1115,23 +1028,6 @@ PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version
 endif
 endif
 
-ifneq ($(strip $(TARGET_BUILD_VARIANT)),user)
-PRODUCT_COPY_FILES += \
-    device/qcom/common/rootdir/etc/init.qcom.testscripts.sh:$(TARGET_COPY_OUT_PRODUCT)/etc/init.qcom.testscripts.sh
-endif
-
-ifneq ($(strip $(TARGET_USES_RRO)),true)
-# enable overlays to use our version of
-# source/resources etc.
-ifneq ($(strip $(TARGET_BOARD_AUTO)),true)
-DEVICE_PACKAGE_OVERLAYS += device/qcom/common/device/overlay
-PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/product/overlay
-else
-DEVICE_PACKAGE_OVERLAYS += device/qcom/common/automotive/device/overlay
-PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/automotive/product/overlay
-endif
-endif
-
 # Set up flags to determine the kernel version
 ifeq ($(TARGET_KERNEL_VERSION),)
      TARGET_KERNEL_VERSION := 3.18
@@ -1146,12 +1042,6 @@ else
      KERNEL_TO_BUILD_ROOT_OFFSET := ../../
      TARGET_KERNEL_SOURCE := kernel/msm-$(TARGET_KERNEL_VERSION)
 endif
-
-#Enabling Ring Tones
-#include frameworks/base/data/sounds/OriginalAudio.mk
-
-#Enabling video for live effects
--include frameworks/base/data/videos/VideoPackage1.mk
 
 # dm-verity definitions
 ifneq ($(BOARD_AVB_ENABLE), true)
@@ -1191,7 +1081,7 @@ PRODUCT_PACKAGES += \
 # have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
 DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
 ifeq ($(wildcard $(DEVICE_CONFIG_DIR)/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/qcom/common/config.fs
+  TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
 else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)
@@ -1205,22 +1095,6 @@ else
     PRODUCT_PROPERTY_OVERRIDES += \
         persist.vendor.qcomsysd.enabled=1
 endif
-
-PRODUCT_PACKAGES_DEBUG += \
-    init.qcom.debug.sh \
-    init.qcom.debug-sdm660.sh \
-    init.qcom.debug-sdm710.sh \
-    init.qti.debug-msmnile-apps.sh \
-    init.qti.debug-msmnile-modem.sh \
-    init.qti.debug-msmnile-slpi.sh \
-    init.qti.debug-talos.sh \
-    init.qti.debug-msmnile.sh \
-    init.qti.debug-kona.sh \
-    init.qti.debug-lito.sh \
-    init.qti.debug-trinket.sh \
-    init.qti.debug-atoll.sh \
-    init.qti.debug-lagoon.sh \
-    init.qti.debug-bengal.sh
 
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
