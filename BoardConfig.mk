@@ -202,6 +202,9 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Audio features
 AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/umi/bluetooth/include
+
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
