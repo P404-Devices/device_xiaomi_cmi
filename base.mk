@@ -1028,21 +1028,6 @@ PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version
 endif
 endif
 
-# Set up flags to determine the kernel version
-ifeq ($(TARGET_KERNEL_VERSION),)
-     TARGET_KERNEL_VERSION := 3.18
-endif
-ifneq ($(KERNEL_OVERRIDE),)
-     TARGET_KERNEL_VERSION := $(KERNEL_OVERRIDE)
-endif
-ifeq ($(wildcard kernel/msm-$(TARGET_KERNEL_VERSION)),)
-     KERNEL_TO_BUILD_ROOT_OFFSET := ../
-     TARGET_KERNEL_SOURCE := kernel
-else
-     KERNEL_TO_BUILD_ROOT_OFFSET := ../../
-     TARGET_KERNEL_SOURCE := kernel/msm-$(TARGET_KERNEL_VERSION)
-endif
-
 # dm-verity definitions
 ifneq ($(BOARD_AVB_ENABLE), true)
    PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
