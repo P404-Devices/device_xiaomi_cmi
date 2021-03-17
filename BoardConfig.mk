@@ -196,6 +196,9 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
+# Audio policy
+USE_XML_AUDIO_POLICY_CONF := 1
+
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
@@ -215,7 +218,6 @@ endif
 
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
-
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
@@ -252,4 +254,3 @@ BUILD_BROKEN_USES_BUILD_HOST_EXECUTABLE := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-
