@@ -199,6 +199,9 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 # Audio policy
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Audio features
+AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
+
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
