@@ -1,5 +1,3 @@
-BUILD_BROKEN_DUP_RULES := true
-
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
