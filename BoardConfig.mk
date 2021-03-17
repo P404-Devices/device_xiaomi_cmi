@@ -205,6 +205,10 @@ AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/umi/bluetooth/include
 
+# Camera
+TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
