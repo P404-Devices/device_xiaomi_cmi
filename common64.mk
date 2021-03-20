@@ -12,6 +12,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.backup.ntpServer=0.pool.ntp.org \
     sys.vendor.shutdown.waittime=500
 
+# Fstab
+PRODUCT_COPY_FILES += \
+    device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+
 # whitelisted app
 PRODUCT_COPY_FILES += \
     device/xiaomi/umi/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml

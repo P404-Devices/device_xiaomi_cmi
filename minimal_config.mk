@@ -64,6 +64,9 @@ INIT += init.target.vendor.rc
 INIT += init.qti.fm.sh
 PRODUCT_PACKAGES += $(INIT)
 
+PRODUCT_COPY_FILES += \
+    device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/device/overlay \
