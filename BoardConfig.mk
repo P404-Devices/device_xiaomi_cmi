@@ -254,3 +254,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/public
 BOARD_SEPOLICY_DIRS += device/xiaomi/umi/sepolicy/vendor
+
+# Inherit proprietary blobs
+-include vendor/xiaomi/umi/BoardConfigVendor.mk
