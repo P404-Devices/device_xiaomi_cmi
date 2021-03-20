@@ -1,3 +1,6 @@
+$(call inherit-product, device/xiaomi/umi/kona.mk)
+$(call inherit-product, device/xiaomi/umi/minimal_config.mk)
+
 TARGET_USE_VENDOR_CAMERA_EXT := true
 
 #skip boot jars check

@@ -1,5 +1,3 @@
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 $(call inherit-product, device/xiaomi/umi/common64.mk)
 
 # Inherit proprietary targets
