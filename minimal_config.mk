@@ -67,6 +67,10 @@ PRODUCT_PACKAGES += $(INIT)
 PRODUCT_COPY_FILES += \
     device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+PRODUCT_COPY_FILES += \
+    device/xiaomi/umi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+    device/xiaomi/umi/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/device/overlay \
