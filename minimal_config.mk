@@ -29,14 +29,6 @@
 
 # Minimal configuration definition for basic boot to shell
 
-ANDROID_BUILD_EMBEDDED := true
-
-ifneq ($(BOARD_FRP_PARTITION_NAME),)
-    PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/$(BOARD_FRP_PARTITION_NAME)
-else
-    PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/config
-endif
-
 #INIT
 INIT := init.qcom.rc
 INIT += init.qcom.sh
@@ -71,46 +63,3 @@ INIT += init.qcom.vendor.rc
 INIT += init.target.vendor.rc
 INIT += init.qti.fm.sh
 PRODUCT_PACKAGES += $(INIT)
-
-# Pure AOSP framework vs vendor modified framework detection
-# - using BUILD_ID xKQ* as mechanism
-ifeq ($(filter $(shell echo $(BUILD_ID) | sed 's/.KQ.*/KQ/g'),KQ),KQ)
-  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-  $(warning "Compile using modified AOSP tree supporting full vendor value-adds")
-else
-  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := false
-  $(warning "Compile using pure AOSP tree")
-endif
-
-#skip boot jars check
-SKIP_BOOT_JARS_CHECK := true
-
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES+= \
-    ro.adb.secure=1
-endif
-
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
-# VNDK-SP:
-PRODUCT_PACKAGES += \
-    vndk-sp \
-
-# Temporary handling
-#
-# Include config.fs get only if legacy device/qcom/<target>/android_filesystem_config.h
-# does not exist as they are mutually exclusive.  Once all target's android_filesystem_config.h
-# have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
-DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
-ifeq ($(wildcard $(DEVICE_CONFIG_DIR)/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
-else
-  $(warning **********)
-  $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)
-  $(warning **********)
-endif
-
-PRODUCT_PACKAGES += liboemaids_system
-PRODUCT_PACKAGES += liboemaids_vendor
