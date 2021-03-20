@@ -1,36 +1,9 @@
+$(call inherit-product, build/make/target/product/gsi_keys.mk)
+
+$(call inherit-product, device/xiaomi/umi/common64.mk)
+
 # Inherit proprietary targets
-$(call inherit-product-if-exists, vendor/xiaomi/cmi/cmi-vendor.mk)
-
-# Default Android A/B configuration
-ENABLE_AB ?= true
-
-# Enable virtual-ab by default
-ENABLE_VIRTUAL_AB ?= true
-
-ifeq ($(ENABLE_VIRTUAL_AB), true)
-    $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-endif
-
-# For QSSI builds, we should skip building the system image. Instead we build the
-# "non-system" images (that we support).
-
-PRODUCT_BUILD_SYSTEM_IMAGE := false
-PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
-PRODUCT_BUILD_VENDOR_IMAGE := true
-PRODUCT_BUILD_PRODUCT_IMAGE := false
-PRODUCT_BUILD_SYSTEM_EXT_IMAGE := false
-PRODUCT_BUILD_ODM_IMAGE := false
-ifeq ($(ENABLE_AB), true)
-PRODUCT_BUILD_CACHE_IMAGE := false
-else
-PRODUCT_BUILD_CACHE_IMAGE := true
-endif
-PRODUCT_BUILD_RAMDISK_IMAGE := true
-PRODUCT_BUILD_USERDATA_IMAGE := true
-
-# Also, since we're going to skip building the system image, we also skip
-# building the OTA package. We'll build this at a later step.
-TARGET_SKIP_OTA_PACKAGE := true
+$(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
@@ -51,21 +24,11 @@ BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
-BOARD_HAVE_BLUETOOTH := false
-BOARD_HAVE_QCOM_FM := false
-TARGET_DISABLE_PERF_OPTIMIATIONS := false
-TARGET_DISABLE_DISPLAY := false
-
 # Enable incremental FS feature
 PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
-
-TARGET_DEFINES_DALVIK_HEAP := true
-$(call inherit-product, device/qcom/vendor-common/common64.mk)
 
 #Product property overrides to configure the Dalvik heap
 PRODUCT_PROPERTY_OVERRIDES  += \
@@ -76,128 +39,12 @@ PRODUCT_PROPERTY_OVERRIDES  += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
-###########
-# Target naming
-PRODUCT_NAME := kona
-PRODUCT_DEVICE := kona
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := Kona for arm64
-
-#----------------------------------------------------------------------
-# wlan specific
-#----------------------------------------------------------------------
-include device/qcom/wlan/kona/wlan.mk
-
-TARGET_USES_AOSP := false
-TARGET_USES_AOSP_FOR_AUDIO := false
-TARGET_USES_QCOM_BSP := false
-
 # RRO configuration
 TARGET_USES_RRO := true
 
-# system prop for Bluetooth SOC type
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=hastings \
-	ro.sf.lcd_density=560
-
-###########
-#QMAA flags starts
-###########
-#QMAA global flag for modular architecture
-#true means QMAA is enabled for system
-#false means QMAA is disabled for system
-
-TARGET_USES_QMAA := false
-
-###########
-#QMAA flags ends
-###########
-
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
-###########
-# Kernel configurations
-TARGET_KERNEL_VERSION := 4.19
-#Enable llvm support for kernel
-KERNEL_LLVM_SUPPORT := true
-#Enable sd-llvm support for kernel
-KERNEL_SD_LLVM_SUPPORT := true
-
-###########
-# Target configurations
-
-QCOM_BOARD_PLATFORMS += kona
-
-TARGET_USES_QSSI := true
-
-###QMAA Indicator Start###
-
-#Full QMAA HAL List
-QMAA_HAL_LIST :=
-
-#Indicator for each enabled QMAA HAL for this target. Each tech team locally verified their QMAA HAL and ensure code is updated/merged, then add their HAL module name to QMAA_ENABLED_HAL_MODULES as an QMAA enabling completion indicator
-QMAA_ENABLED_HAL_MODULES :=
-QMAA_ENABLED_HAL_MODULES += sensors
-
-###QMAA Indicator End###
-
-#Default vendor image configuration
-ENABLE_VENDOR_IMAGE := true
-
-# default is nosdcard, S/W button enabled in resource
-PRODUCT_CHARACTERISTICS := nosdcard
-
-BOARD_FRP_PARTITION_NAME := frp
-
-# Android EGL implementation
-PRODUCT_PACKAGES += libGLES_android
-
 PRODUCT_PACKAGES += fs_config_files
-PRODUCT_PACKAGES += gpio-keys.kl
-
-ifeq ($(ENABLE_AB), true)
-# A/B related packages
-PRODUCT_PACKAGES += update_engine \
-    update_engine_client \
-    update_verifier \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
-
-PRODUCT_HOST_PACKAGES += \
-    brillo_update_payload
-
-# Boot control HAL test app
-PRODUCT_PACKAGES_DEBUG += bootctl
-
-PRODUCT_PACKAGES += \
-  update_engine_sideload
-endif
-
-PRODUCT_HOST_PACKAGES += \
-    configstore_xmlparser
-
-# QRTR related packages
-PRODUCT_PACKAGES += qrtr-ns
-PRODUCT_PACKAGES += qrtr-lookup
-PRODUCT_PACKAGES += libqrtr
-
-
-# f2fs utilities
-PRODUCT_PACKAGES += \
-    sg_write_buffer \
-    f2fs_io \
-    check_f2fs
-
-# Userdata checkpoint
-PRODUCT_PACKAGES += \
-    checkpoint_gc
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
 
 # Camera configuration file. Shared by passthrough/binderized camera HAL
 PRODUCT_PACKAGES += camera.device@3.2-impl
@@ -212,44 +59,11 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := vendor/qcom/opensource/core-utils/
 DEVICE_MANIFEST_FILE := device/xiaomi/umi/manifest.xml
 DEVICE_MATRIX_FILE   := device/xiaomi/umi/compatibility_matrix.xml
 
-#Audio DLKM
-AUDIO_DLKM := audio_apr.ko
-AUDIO_DLKM += audio_q6_pdr.ko
-AUDIO_DLKM += audio_q6_notifier.ko
-AUDIO_DLKM += audio_adsp_loader.ko
-AUDIO_DLKM += audio_q6.ko
-AUDIO_DLKM += audio_usf.ko
-AUDIO_DLKM += audio_pinctrl_wcd.ko
-AUDIO_DLKM += audio_swr.ko
-AUDIO_DLKM += audio_wcd_core.ko
-AUDIO_DLKM += audio_swr_ctrl.ko
-AUDIO_DLKM += audio_wsa881x.ko
-AUDIO_DLKM += audio_platform.ko
-AUDIO_DLKM += audio_hdmi.ko
-AUDIO_DLKM += audio_stub.ko
-AUDIO_DLKM += audio_wcd9xxx.ko
-AUDIO_DLKM += audio_mbhc.ko
-AUDIO_DLKM += audio_native.ko
-AUDIO_DLKM += audio_wcd938x.ko
-AUDIO_DLKM += audio_wcd938x_slave.ko
-AUDIO_DLKM += audio_bolero_cdc.ko
-AUDIO_DLKM += audio_wsa_macro.ko
-AUDIO_DLKM += audio_va_macro.ko
-AUDIO_DLKM += audio_rx_macro.ko
-AUDIO_DLKM += audio_tx_macro.ko
-AUDIO_DLKM += audio_machine_kona.ko
-AUDIO_DLKM += audio_snd_event.ko
-
-PRODUCT_PACKAGES += $(AUDIO_DLKM)
-
 # Kernel modules install path
-KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
+KERNEL_MODULES_ORIG := $(LOCAL_PATH)/modules
+KERNEL_MODULES_DEST := $(TARGET_COPY_OUT_VENDOR)/lib/modules
 
-# Audio configuration file
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/kona/kona.mk
-
-USE_LIB_PROCESS_GROUP := true
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(KERNEL_MODULES_ORIG)/,$(KERNEL_MODULES_DEST))
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
@@ -259,17 +73,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml
 
-#Enable full treble flag
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_VENDOR_MOVE_ENABLED := true
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-ifeq (true,$(BUILDING_WITH_VSDK))
-  BOARD_VNDK_VERSION := 30
-else
-  BOARD_VNDK_VERSION := current
-endif
-TARGET_MOUNT_POINTS_SYMLINKS := false
+BOARD_VNDK_VERSION := current
 
 # FaceAuth feature
 PRODUCT_COPY_FILES += \
@@ -281,10 +85,7 @@ PRODUCT_COPY_FILES += \
 
 # system prop for enabling QFS (QTI Fingerprint Solution)
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qfp=true
-#target specific runtime prop for qspm
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qspm.enable=true
+    persist.vendor.qfp=false
 #ANT+ stack
 PRODUCT_PACKAGES += \
     libvolumelistener
@@ -293,8 +94,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
-
-PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += telephony-ext
 
@@ -307,15 +106,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Target specific Netflix custom property
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q8250-19134-1
-
-PRODUCT_PACKAGES += android.hardware.lights-service.qti
-###################################################################################
-# This is the End of target.mk file.
-# Now, Pickup other split product.mk files:
-###################################################################################
-# TODO: Relocate the system product.mk files pickup into qssi lunch, once it is up.
-$(foreach sdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/system/*.mk)), \
-    $(call inherit-product, $(sdefs)))
-$(foreach vdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/vendor/*.mk)), \
-    $(call inherit-product, $(vdefs)))
-###################################################################################
