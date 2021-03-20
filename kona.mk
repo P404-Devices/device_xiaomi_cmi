@@ -1,3 +1,6 @@
+# Inherit proprietary targets
+$(call inherit-product-if-exists, vendor/xiaomi/cmi/cmi-vendor.mk)
+
 # Default Android A/B configuration
 ENABLE_AB ?= true
 
