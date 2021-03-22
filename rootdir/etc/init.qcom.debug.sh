@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2014-2017, 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2014-2017, 2020-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -2504,12 +2504,22 @@ fi
 
 #add permission for block_size, mem_type, mem_size nodes to collect diag over QDSS by ODL
 #application by "oem_2902" group
-chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
-chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
-chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_type
-chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_type
-chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_size
-chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_size
+if [ -e  /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size ]
+then
+    chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+    chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+    chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_type
+    chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_type
+    chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_size
+    chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/mem_size
+else
+    chown -h root.oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+    chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+    chown -h root.oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/mem_type
+    chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/mem_type
+    chown -h root.oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/mem_size
+    chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/mem_size
+fi
 
 enable_dcc_config
 enable_core_gladiator_hang_config
