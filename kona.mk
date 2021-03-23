@@ -32,6 +32,51 @@ PRODUCT_PROPERTY_OVERRIDES  += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
+# Audio Features
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1 \
+    aaudio.mmap_policy=2 \
+    aaudio.mmap_exclusive_policy=2 \
+    aaudio.hw_burst_min_usec=2000 \
+    vendor.audio.adm.buffering.ms=2 \
+    vendor.audio_hal.period_multiplier=2 \
+    vendor.audio.feature.a2dp_offload.enable=true \
+    vendor.audio.feature.audiozoom.enable=false \
+    vendor.audio.feature.concurrent_capture.enable=true \
+    vendor.audio.feature.external_dsp.enable=false \
+    vendor.audio.feature.external_speaker.enable=false \
+    vendor.audio.feature.fluence.enable=true \
+    vendor.audio.feature.hfp.enable=true \
+    vendor.audio.feature.hwdep_cal.enable=false \
+    vendor.audio.feature.incall_music.enable=true \
+    vendor.audio.feature.maxx_audio.enable=false \
+    vendor.audio.feature.snd_mon.enable=true \
+    vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.spkr_prot.enable=false \
+    vendor.audio.feature.usb_offload.enable=true \
+    vendor.audio.capture.enforce_legacy_copp_sr=true \
+    vendor.audio.offload.buffer.size.kb=256 \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
+    persist.vendor.audio.voicecall.speaker.stereo=true \
+    vendor.audio.offload.gapless.enabled=true
+
+# Audio Compress
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.compr_voip.enable=true
+
+# Audio fluence
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.audio.sdk.fluencetype=fluencepro \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecomm=true \
+    persist.vendor.audio.fluence.voicerec=false
+
+# Audio volume steps
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.vc_call_vol_steps=7 \
+    ro.config.media_vol_steps=25
+
 # RRO configuration
 TARGET_USES_RRO := true
 

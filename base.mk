@@ -15,6 +15,34 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 #ATRACE_HAL
 ATRACE_HAL := android.hardware.atrace@1.0-service
 
+#AUDIO_HAL
+AUDIO_HAL += android.hardware.audio@6.0-impl
+AUDIO_HAL += android.hardware.audio.effect@6.0-impl
+AUDIO_HAL += android.hardware.audio.service
+AUDIO_HAL += android.hardware.bluetooth.audio@2.0-impl
+AUDIO_HAL += android.hardware.soundtrigger@2.3-impl
+AUDIO_HAL += audio.a2dp.default
+AUDIO_HAL += audio.primary.kona
+AUDIO_HAL += audio.r_submix.default
+AUDIO_HAL += audio.usb.default
+AUDIO_HAL += libaudio-resampler
+AUDIO_HAL += audio.hearing_aid.default
+AUDIO_HAL += audio.bluetooth.default
+AUDIO_HAL += liba2dpoffload
+AUDIO_HAL += libaudiozoom
+AUDIO_HAL += libbatterylistener
+AUDIO_HAL += libcirrusspkrprot
+AUDIO_HAL += libcomprcapture
+AUDIO_HAL += libexthwplugin
+AUDIO_HAL += libhdmiedid
+AUDIO_HAL += libhdmipassthru
+AUDIO_HAL += libqcomvoiceprocessingdescriptors
+AUDIO_HAL += libqcomvisualizer
+AUDIO_HAL += libqcompostprocbundle
+AUDIO_HAL += libhfp
+AUDIO_HAL += libsndmonitor
+AUDIO_HAL += libqcomvoiceprocessing
+
 #DATA_OS
 DATA_OS := librmnetctl
 
@@ -101,6 +129,7 @@ IMS_EXT := ims-ext-common
 IMS_EXT += ims_ext_common.xml
 
 PRODUCT_PACKAGES += $(ATRACE_HAL)
+PRODUCT_PACKAGES += $(AUDIO_HAL)
 PRODUCT_PACKAGES += $(BSON)
 PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(RCS)
