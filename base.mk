@@ -77,6 +77,14 @@ FASTBOOTD += fastbootd
 HEALTH += android.hardware.health@2.1-impl
 HEALTH += android.hardware.health@2.1-service
 
+#HIDL
+HIDL += libhwbinder.vendor
+HIDL += android.hidl.base@1.0
+HIDL += android.hidl.base@1.0.vendor
+HIDL += android.hidl.manager@1.0
+HIDL += android.hidl.manager@1.0.vendor
+
+#HIDL_WRAPPER
 HIDL_WRAPPER := qti-telephony-hidl-wrapper
 HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
 
@@ -171,6 +179,7 @@ PRODUCT_PACKAGES += $(DRM)
 PRODUCT_PACKAGES += $(FASTBOOTD)
 PRODUCT_PACKAGES += $(HEALTH)
 PRODUCT_PACKAGES += $(HOSTAPD)
+PRODUCT_PACKAGES += $(HIDL)
 PRODUCT_PACKAGES += $(HIDL_WRAPPER)
 PRODUCT_PACKAGES += $(I420CC)
 PRODUCT_PACKAGES += $(INIT)
