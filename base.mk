@@ -189,6 +189,11 @@ RCS += rcs_service_api.xml
 RIL += libprotobuf-cpp-full
 RIL += librmnetctl
 
+#SENSOR
+SENSOR += android.hardware.sensors@1.0-impl
+SENSOR += android.hardware.sensors@1.0-service
+SENSOR += libsensorndkbridge
+
 #TELEPHONY_EXT
 TELEPHONY_EXT += telephony-ext
 TELEPHONY_EXT_JAR += telephony-ext
@@ -231,6 +236,7 @@ PRODUCT_PACKAGES += $(NFC)
 PRODUCT_PACKAGES += $(QMI)
 PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
 PRODUCT_PACKAGES += $(RIL)
+PRODUCT_PACKAGES += $(SENSOR)
 PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
