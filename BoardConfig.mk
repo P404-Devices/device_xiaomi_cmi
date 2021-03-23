@@ -135,6 +135,9 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 #Enable dtb in boot image and boot image header version 2 support.
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Audio policy
 USE_XML_AUDIO_POLICY_CONF := 1
 
