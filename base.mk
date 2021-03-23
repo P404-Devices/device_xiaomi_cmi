@@ -67,6 +67,9 @@ DATA_OS := librmnetctl
 #DISPLAY
 DISPLAY += libtinyxml
 
+#DRM
+DRM += android.hardware.drm@1.3-service.clearkey
+
 HIDL_WRAPPER := qti-telephony-hidl-wrapper
 HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
 
@@ -157,6 +160,7 @@ PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(RCS)
 PRODUCT_PACKAGES += $(DATA_OS)
 PRODUCT_PACKAGES += $(DISPLAY)
+PRODUCT_PACKAGES += $(DRM)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(HIDL_WRAPPER)
 PRODUCT_PACKAGES += $(I420CC)

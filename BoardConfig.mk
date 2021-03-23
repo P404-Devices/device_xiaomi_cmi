@@ -151,6 +151,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/umi/bluetooth/inclu
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
