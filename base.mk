@@ -201,6 +201,9 @@ TELEPHONY_EXT_JAR += telephony-ext
 #THERMAL_HAL
 THERMAL_HAL += android.hardware.thermal@2.0-service.qti
 
+#USB
+USB += android.hardware.usb@1.2-service-qti
+
 #WPA
 WPA := wpa_supplicant.conf
 WPA += wpa_supplicant
@@ -243,6 +246,7 @@ PRODUCT_PACKAGES += $(SENSOR)
 PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
+PRODUCT_PACKAGES += $(USB)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(IPACM)
 PRODUCT_PACKAGES += $(IMS_EXT)
