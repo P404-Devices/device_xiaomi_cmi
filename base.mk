@@ -112,43 +112,49 @@ IPACM += liboffloadhal
 IR += android.hardware.ir@1.0-impl
 IR += android.hardware.ir@1.0-service
 
+#LIBLIGHTS
+LIBLIGHTS += lights.kona
+
+#LIBPOWER -- Add HIDL Packages
+LIBPOWER += android.hardware.power-service
+LIBPOWER += android.hardware.power-impl
+
 #LIB_XML2
 LIB_XML2 := libxml2
 
 #memtrack
 LIBMEMTRACK += memtrack.kona
 
-#LIBLIGHTS
-LIBLIGHTS += lights.kona
-
 #LIBQDMETADATA
 LIBQDMETADATA := libqdMetaData
-
-#LIBPOWER -- Add HIDL Packages
-LIBPOWER += android.hardware.power@1.0-impl
-LIBPOWER += android.hardware.power@1.0-service
 
 #LLVM for RenderScript
 #use qcom LLVM
 $(call inherit-product-if-exists, external/llvm/llvm-select.mk)
+
+#MEDIA
+MEDIA += libavservices_minijail
+MEDIA += libavservices_minijail.vendor
+MEDIA += libavservices_minijail_vendor
 
 #MM_AUDIO
 MM_AUDIO += libOmxAacEnc
 MM_AUDIO += libOmxAmrEnc
 MM_AUDIO += libOmxEvrcEnc
 MM_AUDIO += libOmxQcelp13Enc
+MM_AUDIO += libOmxG711Enc
 
 #MM_CORE
 MM_CORE += libOmxCore
-
-#WFD
-MM_WFD := libwfdaac
-MM_WFD := libwfdaac_vendor
 
 #MM_VIDEO
 MM_VIDEO += libOmxVdec
 MM_VIDEO += libOmxVenc
 MM_VIDEO += libstagefrighthw
+
+#WFD
+MM_WFD := libwfdaac
+MM_WFD := libwfdaac_vendor
 
 #NQ_NFC
 NQ_NFC += com.gsma.services.nfc
