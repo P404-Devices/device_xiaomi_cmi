@@ -204,6 +204,14 @@ THERMAL_HAL += android.hardware.thermal@2.0-service.qti
 #USB
 USB += android.hardware.usb@1.2-service-qti
 
+#WIFI
+WIFI += android.hardware.wifi@1.0-service
+WIFI += libwpa_client
+WIFI += libwifi-hal-ctrl
+WIFI += libwifi-hal-qcom
+WIFI += vendor.qti.hardware.wifi.hostapd@1.2.vendor
+WIFI += vendor.qti.hardware.wifi.supplicant@2.1.vendor
+
 #WPA
 WPA := wpa_supplicant.conf
 WPA += wpa_supplicant
@@ -247,6 +255,7 @@ PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
 PRODUCT_PACKAGES += $(USB)
+PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(IPACM)
 PRODUCT_PACKAGES += $(IMS_EXT)
