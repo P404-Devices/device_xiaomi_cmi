@@ -84,4 +84,3 @@ elif [ "$wlanchip" == "AR6004-SDIO" ]; then
     chown -h system.system /sys/devices/msm_sdcc.3/polling
     chown -h system.system /sys/devices/msm_sdcc.4/polling
 fi
-

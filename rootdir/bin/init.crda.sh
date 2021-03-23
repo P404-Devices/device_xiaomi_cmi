@@ -1,4 +1,6 @@
-# Copyright (c) 2017-2018,2020 The Linux Foundation. All rights reserved.
+#! /vendor/bin/sh
+
+# Copyright (c) 2012, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -24,19 +26,10 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-on init
-    write /sys/class/backlight/panel0-backlight/brightness 200
-    setprop sys.usb.configfs 1
-on property:ro.boot.usbcontroller=*
-    setprop sys.usb.controller ${ro.boot.usbcontroller}
-    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
-on fs
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    start init-recovery-qcom-sh
 
-service init-recovery-qcom-sh /init.recovery.qcom.sh
-    user root
-    group root
-    seclabel u:r:recovery:s0
-    oneshot
+country=`getprop wlan.crda.country`
+# crda takes input in COUNTRY environment variable
+if [ $country != "" ]
+then
+COUNTRY="$country" /system/bin/crda
+fi
