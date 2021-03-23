@@ -45,7 +45,6 @@ INIT += init.qcom.sh
 INIT += init.qcom.usb.sh
 INIT += init.qti.chg_policy.sh
 INIT += init.qti.dcvs.sh
-INIT += init.qti.media.sh
 INIT += init.qti.qcv.sh
 INIT += mishow.sh
 INIT += playback.sh
@@ -69,10 +68,10 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/device/overlay \
-    $(LOCAL_PATH)/product/overlay \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-404
+    device/xiaomi/umi/device/overlay \
+    device/xiaomi/umi/product/overlay \
+    device/xiaomi/umi/overlay \
+    device/xiaomi/umi/overlay-404
 
 # Properties
 TARGET_SYSTEM_PROP += device/xiaomi/umi/system.prop

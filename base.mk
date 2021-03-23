@@ -1,6 +1,3 @@
-$(call inherit-product, device/xiaomi/umi/kona.mk)
-$(call inherit-product, device/xiaomi/umi/minimal_config.mk)
-
 TARGET_USE_VENDOR_CAMERA_EXT := true
 
 #skip boot jars check
@@ -18,12 +15,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 #ATRACE_HAL
 ATRACE_HAL := android.hardware.atrace@1.0-service
 
-#BSON
-BSON := libbson
-
-#ColorConvert
-C2DCC := libc2dcolorconvert
-
 #DATA_OS
 DATA_OS := librmnetctl
 
@@ -35,9 +26,6 @@ QTI_TELEPHONY_UTILS += qti_telephony_utils.xml
 
 #HOSTAPD
 HOSTAPD := hostapd
-
-#I420COLORCONVERT
-I420CC := libI420colorconvert
 
 #IPACM
 IPACM += ipacm
@@ -63,9 +51,6 @@ LIBPOWER += android.hardware.power@1.0-service
 #LLVM for RenderScript
 #use qcom LLVM
 $(call inherit-product-if-exists, external/llvm/llvm-select.mk)
-
-#MEDIA_PROFILES
-MEDIA_PROFILES := media_profiles.xml
 
 #MM_AUDIO
 MM_AUDIO += libOmxAacEnc
