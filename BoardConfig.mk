@@ -34,7 +34,7 @@ USE_OPENGL_RENDERER := true
 TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
 
 #Generate DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_SEPARATED_DTBO := false
 
 # Partitions (Boot)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
