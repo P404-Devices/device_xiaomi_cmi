@@ -171,17 +171,12 @@ NFC += vendor.nxp.hardware.nfc@2.0
 NFC += vendor.nxp.hardware.nfc@1.1.vendor
 NFC += vendor.nxp.hardware.nfc@2.0.vendor
 
-#Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+#QMI
+QMI += libjson
 
-PROTOBUF := libprotobuf-cpp-full
-
-#STK
-STK := Stk
-
-#WPA
-WPA := wpa_supplicant.conf
-WPA += wpa_supplicant
+#QTI_TELEPHONY_UTILS
+QTI_TELEPHONY_UTILS := qti-telephony-utils
+QTI_TELEPHONY_UTILS += qti_telephony_utils.xml
 
 #RCS
 RCS := rcs_service_aidl
@@ -190,9 +185,20 @@ RCS += rcs_service_aidl_static
 RCS += rcs_service_api
 RCS += rcs_service_api.xml
 
-#IMS Extension module for Android Telephony
-IMS_EXT := ims-ext-common
-IMS_EXT += ims_ext_common.xml
+#RIL
+RIL += libprotobuf-cpp-full
+RIL += librmnetctl
+
+#TELEPHONY_EXT
+TELEPHONY_EXT += telephony-ext
+TELEPHONY_EXT_JAR += telephony-ext
+
+#WPA
+WPA := wpa_supplicant.conf
+WPA += wpa_supplicant
+
+#Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 PRODUCT_PACKAGES += $(ATRACE_HAL)
 PRODUCT_PACKAGES += $(AUDIO_HAL)
@@ -222,9 +228,11 @@ PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(NET)
 PRODUCT_PACKAGES += $(NFC)
-PRODUCT_PACKAGES += $(PROTOBUF)
+PRODUCT_PACKAGES += $(QMI)
 PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
-PRODUCT_PACKAGES += $(STK)
+PRODUCT_PACKAGES += $(RIL)
+PRODUCT_PACKAGES += $(TELEPHONY_EXT)
+PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(IPACM)
