@@ -128,10 +128,6 @@ LIBMEMTRACK += memtrack.kona
 #LIBQDMETADATA
 LIBQDMETADATA := libqdMetaData
 
-#LLVM for RenderScript
-#use qcom LLVM
-$(call inherit-product-if-exists, external/llvm/llvm-select.mk)
-
 #MEDIA
 MEDIA += libavservices_minijail
 MEDIA += libavservices_minijail.vendor
@@ -168,14 +164,14 @@ NFC += vendor.nxp.hardware.nfc@1.1.vendor
 NFC += vendor.nxp.hardware.nfc@2.0.vendor
 
 #QMI
-QMI += libjson
+QMI := libjson
 
 #QTI_TELEPHONY_UTILS
-QTI_TELEPHONY_UTILS := qti-telephony-utils
+QTI_TELEPHONY_UTILS += qti-telephony-utils
 QTI_TELEPHONY_UTILS += qti_telephony_utils.xml
 
 #RCS
-RCS := rcs_service_aidl
+RCS += rcs_service_aidl
 RCS += rcs_service_aidl.xml
 RCS += rcs_service_aidl_static
 RCS += rcs_service_api
@@ -195,10 +191,10 @@ TELEPHONY_EXT += telephony-ext
 TELEPHONY_EXT_JAR += telephony-ext
 
 #THERMAL_HAL
-THERMAL_HAL += android.hardware.thermal@2.0-service.qti
+THERMAL_HAL := android.hardware.thermal@2.0-service.qti
 
 #USB
-USB += android.hardware.usb@1.2-service-qti
+USB := android.hardware.usb@1.2-service-qti
 
 #WIFI
 WIFI += android.hardware.wifi@1.0-service
@@ -209,13 +205,17 @@ WIFI += vendor.qti.hardware.wifi.hostapd@1.2.vendor
 WIFI += vendor.qti.hardware.wifi.supplicant@2.1.vendor
 
 #WFD
-MM_WFD := libwfdaac
-MM_WFD := libwfdaac_vendor
+MM_WFD += libwfdaac
+MM_WFD += libwfdaac_vendor
 MM_WFD += libnl
 
 #WPA
-WPA := wpa_supplicant.conf
+WPA += wpa_supplicant.conf
 WPA += wpa_supplicant
+
+#LLVM for RenderScript
+#use qcom LLVM
+$(call inherit-product-if-exists, external/llvm/llvm-select.mk)
 
 #Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -263,10 +263,6 @@ PRODUCT_PACKAGES += $(IMS_EXT)
 
 # MSM updater library
 PRODUCT_PACKAGES += librecovery_updater_msm
-
-# healthd libaray expanded for mode charger
-PRODUCT_PACKAGES += android.hardware.health@2.1-impl
-PRODUCT_PACKAGES += android.hardware.health@2.1-service
 
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
