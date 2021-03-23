@@ -30,6 +30,9 @@ TARGET_NO_KERNEL := false
 
 USE_OPENGL_RENDERER := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
+
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
