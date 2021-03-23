@@ -43,6 +43,15 @@ AUDIO_HAL += libhfp
 AUDIO_HAL += libsndmonitor
 AUDIO_HAL += libqcomvoiceprocessing
 
+#BLUETOOTH_HAL
+BLUETOOTH_HAL += android.hardware.bluetooth.audio@2.0-impl
+BLUETOOTH_HAL += audio.bluetooth.default
+BLUETOOTH_HAL += libbluetooth_qti
+BLUETOOTH_HAL += libbthost_if
+BLUETOOTH_HAL += libldacBT_dec
+BLUETOOTH_HAL += vendor.qti.hardware.bluetooth_audio@2.0.vendor
+BLUETOOTH_HAL += vendor.qti.hardware.btconfigstore@1.0.vendor
+
 #DATA_OS
 DATA_OS := librmnetctl
 
@@ -130,6 +139,7 @@ IMS_EXT += ims_ext_common.xml
 
 PRODUCT_PACKAGES += $(ATRACE_HAL)
 PRODUCT_PACKAGES += $(AUDIO_HAL)
+PRODUCT_PACKAGES += $(BLUETOOTH_HAL)
 PRODUCT_PACKAGES += $(BSON)
 PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(RCS)
