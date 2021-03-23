@@ -52,6 +52,15 @@ BLUETOOTH_HAL += libldacBT_dec
 BLUETOOTH_HAL += vendor.qti.hardware.bluetooth_audio@2.0.vendor
 BLUETOOTH_HAL += vendor.qti.hardware.btconfigstore@1.0.vendor
 
+#CAMERA
+CAMERA += android.hardware.camera.provider@2.4-impl
+CAMERA += android.hardware.camera.provider@2.4-service_64
+CAMERA += libcamera2ndk_vendor
+CAMERA += libgui_vendor
+CAMERA += vendor.qti.hardware.camera.device@3.5.vendor
+CAMERA += vendor.qti.hardware.camera.postproc@1.0.vendor
+CAMERA += libstdc++.vendor
+
 #DATA_OS
 DATA_OS := librmnetctl
 
@@ -140,7 +149,7 @@ IMS_EXT += ims_ext_common.xml
 PRODUCT_PACKAGES += $(ATRACE_HAL)
 PRODUCT_PACKAGES += $(AUDIO_HAL)
 PRODUCT_PACKAGES += $(BLUETOOTH_HAL)
-PRODUCT_PACKAGES += $(BSON)
+PRODUCT_PACKAGES += $(CAMERA)
 PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(RCS)
 PRODUCT_PACKAGES += $(DATA_OS)
