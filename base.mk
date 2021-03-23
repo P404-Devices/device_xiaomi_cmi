@@ -198,6 +198,9 @@ SENSOR += libsensorndkbridge
 TELEPHONY_EXT += telephony-ext
 TELEPHONY_EXT_JAR += telephony-ext
 
+#THERMAL_HAL
+THERMAL_HAL += android.hardware.thermal@2.0-service.qti
+
 #WPA
 WPA := wpa_supplicant.conf
 WPA += wpa_supplicant
