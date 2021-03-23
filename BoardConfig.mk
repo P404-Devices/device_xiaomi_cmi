@@ -28,8 +28,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
 
--include $(QCPATH)/common/kona/BoardConfigVendor.mk
-
 USE_OPENGL_RENDERER := true
 
 #Generate DTBO image
@@ -131,8 +129,7 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 #Enable dtb in boot image and boot image header version 2 support.
-BOARD_BOOTIMG_HEADER_VERSION := 2
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Audio policy
 USE_XML_AUDIO_POLICY_CONF := 1
@@ -175,9 +172,6 @@ TARGET_USES_MKE2FS := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
-
-#Add non-hlos files to ota packages
-ADD_RADIO_FILES := true
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
