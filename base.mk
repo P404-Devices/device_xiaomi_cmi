@@ -108,6 +108,10 @@ IPACM += ipacm-diag
 IPACM += libipanat
 IPACM += liboffloadhal
 
+#IR
+IR += android.hardware.ir@1.0-impl
+IR += android.hardware.ir@1.0-service
+
 #LIB_XML2
 LIB_XML2 := libxml2
 
@@ -190,7 +194,7 @@ PRODUCT_PACKAGES += $(HEALTH)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(HIDL)
 PRODUCT_PACKAGES += $(HIDL_WRAPPER)
-PRODUCT_PACKAGES += $(I420CC)
+PRODUCT_PACKAGES += $(IR)
 PRODUCT_PACKAGES += $(INIT)
 PRODUCT_PACKAGES += $(LIB_XML2)
 PRODUCT_PACKAGES += $(LIBMEMTRACK)
