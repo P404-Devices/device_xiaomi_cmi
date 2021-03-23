@@ -155,10 +155,6 @@ MM_VIDEO += libstagefrighthw
 #NET
 NET += netutils-wrapper-1.0
 
-#WFD
-MM_WFD := libwfdaac
-MM_WFD := libwfdaac_vendor
-
 #NFC
 NFC += com.android.nfc_extras
 NFC += com.gsma.services.nfc
@@ -211,6 +207,11 @@ WIFI += libwifi-hal-ctrl
 WIFI += libwifi-hal-qcom
 WIFI += vendor.qti.hardware.wifi.hostapd@1.2.vendor
 WIFI += vendor.qti.hardware.wifi.supplicant@2.1.vendor
+
+#WFD
+MM_WFD := libwfdaac
+MM_WFD := libwfdaac_vendor
+MM_WFD += libnl
 
 #WPA
 WPA := wpa_supplicant.conf
