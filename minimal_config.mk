@@ -48,19 +48,19 @@ INIT += ueventd.qcom.rc
 PRODUCT_PACKAGES += $(INIT)
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    device/xiaomi/cmi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    device/xiaomi/umi/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
+    device/xiaomi/cmi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+    device/xiaomi/cmi/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/xiaomi/umi/device/overlay \
-    device/xiaomi/umi/product/overlay \
-    device/xiaomi/umi/overlay \
-    device/xiaomi/umi/overlay-404
+    device/xiaomi/cmi/device/overlay \
+    device/xiaomi/cmi/product/overlay \
+    device/xiaomi/cmi/overlay \
+    device/xiaomi/cmi/overlay-404
 
 # Properties
-TARGET_SYSTEM_PROP += device/xiaomi/umi/system.prop
-TARGET_VENDOR_PROP += device/xiaomi/umi/vendor.prop
+TARGET_SYSTEM_PROP += device/xiaomi/cmi/system.prop
+TARGET_VENDOR_PROP += device/xiaomi/cmi/vendor.prop

@@ -30,7 +30,7 @@ TARGET_NO_KERNEL := false
 USE_OPENGL_RENDERER := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
+TARGET_FS_CONFIG_GEN := device/xiaomi/cmi/config.fs
 
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := false
@@ -111,19 +111,19 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch
 TARGET_USES_UNCOMPRESSED_KERNEL := false
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CONFIG := umi_user_defconfig
+TARGET_KERNEL_CONFIG := cmi_user_defconfig
 
 # Prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/xiaomi/umi/prebuilt/Image
+TARGET_PREBUILT_KERNEL := device/xiaomi/cmi/prebuilt/Image
 TARGET_FORCE_PREBUILT_KERNEL := true
 
 # Prebuilt DTB
-TARGET_PREBUILT_DTB := device/xiaomi/umi/prebuilt/dtb
+TARGET_PREBUILT_DTB := device/xiaomi/cmi/prebuilt/dtb
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_INCLUDE_DTB_IN_BOOTIMG :=
 
 # Prebuilt DTBO
-BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/umi/prebuilt/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/cmi/prebuilt/dtbo.img
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
@@ -147,7 +147,7 @@ AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 TARGET_USE_QTI_BT_STACK := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/umi/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/cmi/bluetooth/include
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
@@ -167,7 +167,7 @@ TARGET_PD_SERVICE_ENABLED := true
 TARGET_PER_MGR_ENABLED := true
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/umi:libfod_extension.kona
+TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/cmi:libfod_extension.kona
 
 # Dex
 ifeq ($(HOST_OS),linux)
@@ -183,7 +183,7 @@ endif
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := device/xiaomi/umi/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/xiaomi/cmi/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -224,9 +224,9 @@ BUILD_BROKEN_USES_BUILD_HOST_EXECUTABLE := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/public
-BOARD_SEPOLICY_DIRS += device/xiaomi/umi/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/cmi/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/cmi/sepolicy/public
+BOARD_SEPOLICY_DIRS += device/xiaomi/cmi/sepolicy/vendor
 
 # Inherit proprietary blobs
--include vendor/xiaomi/umi/BoardConfigVendor.mk
+-include vendor/xiaomi/cmi/BoardConfigVendor.mk

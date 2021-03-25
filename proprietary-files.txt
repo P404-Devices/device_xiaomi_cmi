@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from umi MIUI 12.2.10
+# All unpinned blobs below are extracted from cmi MIUI 12.2.4
 
 # ACDB
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
@@ -170,41 +170,41 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
-vendor/lib64/camera/com.qti.actuator.umi_dw9800_ov16e10.so
-vendor/lib64/camera/com.qti.actuator.umi_gc021m1_macro_dw9714.so
+vendor/lib64/camera/com.qti.actuator.cmi_sunny_ultra_dw9800.so
+vendor/lib64/camera/com.qti.eeprom.cmi_ofilm_s5k3t2_gt24p64.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_ov08a10_m24c64.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_ov08a10_m24c64x.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_s5k2l7_m24c64x.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_s5khmx_m24c128.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_s5khmx_m24c128x.so
+vendor/lib64/camera/com.qti.eeprom.cmi_semco_s5khmx_m24c64.so
+vendor/lib64/camera/com.qti.eeprom.cmi_sunny_imx350_gt24p64b.so
+vendor/lib64/camera/com.qti.eeprom.cmi_sunny_s5k5e8yx_gt24p64.so
+vendor/lib64/camera/com.qti.eeprom.hawkeye_semco_ov48c_m24c64x.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
-vendor/lib64/camera/com.qti.eeprom.umi_s5k3t2_gt24p64_sunny.so
-vendor/lib64/camera/com.qti.eeprom.umi_semco_m24c128x_s5khmx.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gc02m1_depth_otp.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gc02m1_gt24p64_macro.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gt24p64b_ov13b10.so
 vendor/lib64/camera/com.qti.eeprom.umi_sunny_s5k5e8yx_depth.so
+vendor/lib64/camera/com.qti.sensor.cmi_s5k5e8yx_macro.so
+vendor/lib64/camera/com.qti.sensor.imx350_cmi.so
 vendor/lib64/camera/com.qti.sensor.imx563.so
-vendor/lib64/camera/com.qti.sensor.ov13b10_umi.so
-vendor/lib64/camera/com.qti.sensor.ov16e10.so
-vendor/lib64/camera/com.qti.sensor.s5k3t2_umi.so
-vendor/lib64/camera/com.qti.sensor.s5khmx.so
-vendor/lib64/camera/com.qti.sensor.sunny_s5k5e8yx.so
-vendor/lib64/camera/com.qti.sensor.umi_gc02m1_depth.so
-vendor/lib64/camera/com.qti.sensor.umi_gc02m1_macro.so
-vendor/lib64/camera/com.qti.sensor.umi_sunny_s5k5e8yx_depth.so
-vendor/lib64/camera/com.qti.sensormodule.umi_semco_s5khmx.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_gc02m1_depth.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_gc02m1_macro.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_ov13b10.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_ov16e10.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k3t2.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k5e8yx_depth.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k5e8yx_macro.bin
+vendor/lib64/camera/com.qti.sensor.ov08a10_cmi.so
+vendor/lib64/camera/com.qti.sensor.ov48c_hawkeye.so
+vendor/lib64/camera/com.qti.sensor.s5k2l7_cmi.so
+vendor/lib64/camera/com.qti.sensor.s5k3t2_cmi.so
+vendor/lib64/camera/com.qti.sensor.s5khmx_cmi.so
+vendor/lib64/camera/com.qti.sensor.s5khmx_wide_cmi.so
+vendor/lib64/camera/com.qti.sensormodule.cmi_ofilm_s5k3t2.bin
+vendor/lib64/camera/com.qti.sensormodule.cmi_semco_ov08a10_tele4x_v1.bin
+vendor/lib64/camera/com.qti.sensormodule.cmi_semco_s5k2l7_tele2x.bin
+vendor/lib64/camera/com.qti.sensormodule.cmi_semco_s5khmx_wide.bin
+vendor/lib64/camera/com.qti.sensormodule.cmi_semco_s5khmx_wide_v1.bin
+vendor/lib64/camera/com.qti.sensormodule.cmi_sunny_imx350_ultra_wide.bin
+vendor/lib64/camera/com.qti.sensormodule.hawkeye_semco_ov48c_wide.bin
+vendor/lib64/camera/com.qti.tuned.cmi_ofilm_s5k3t2.bin
+vendor/lib64/camera/com.qti.tuned.cmi_semco_ov08a10_tele4x.bin
+vendor/lib64/camera/com.qti.tuned.cmi_semco_s5k2l7_tele2x.bin
+vendor/lib64/camera/com.qti.tuned.cmi_semco_s5khmx_wide.bin
+vendor/lib64/camera/com.qti.tuned.cmi_sunny_imx350_ultra_wide.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.umi_semco_s5khmx.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_gc02m1_depth.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_gc02m1_macro.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_ov13b10.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_ov16e10.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k3t2.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k5e8yx_depth.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k5e8yx_macro.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
@@ -408,28 +408,6 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libubifocus.so
 
 # Camera-configs
-vendor/etc/camera/102_SummerDay.png
-vendor/etc/camera/103_Fantasy.png
-vendor/etc/camera/104_Meet.png
-vendor/etc/camera/105_WindSing.png
-vendor/etc/camera/106_Lost.png
-vendor/etc/camera/107_Central.png
-vendor/etc/camera/108_NorthernEurope.png
-vendor/etc/camera/109_Rome.png
-vendor/etc/camera/110_BlackGold.png
-vendor/etc/camera/111_GreenOrange.png
-vendor/etc/camera/112_CyberPunk.png
-vendor/etc/camera/113_BlackIce.png
-vendor/etc/camera/CFR_para_HD_V03.bin
-vendor/etc/camera/CFR_para_T_2x_V03.bin
-vendor/etc/camera/CFR_para_UW_V01.bin
-vendor/etc/camera/CFR_para_W_V03.bin
-vendor/etc/camera/GpuKernelRepo.pb
-vendor/etc/camera/LDC_FPC_TUNING_DATA.bin
-vendor/etc/camera/LDC_FPC_TUNING_DATA_AI.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x03.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin
 vendor/etc/camera/ai_enhance.dlc
 vendor/etc/camera/almalence_sr_params_tele.config
 vendor/etc/camera/almalence_sr_params_tele4x.config
@@ -447,27 +425,36 @@ vendor/etc/camera/almalence_sr_params_wide_64M.config
 vendor/etc/camera/beauty_ui9_intelligent_params.config
 vendor/etc/camera/bokehParams.json
 vendor/etc/camera/camxoverridesettings.txt
-vendor/etc/camera/com.xiaomi.dcal.wd.golden
+vendor/etc/camera/CFR_para_HD_V03.bin
+vendor/etc/camera/CFR_para_T_2x_V03.bin
+vendor/etc/camera/CFR_para_T_4x_V03.bin
+vendor/etc/camera/CFR_para_UW_V03.bin
+vendor/etc/camera/CFR_para_W_V03.bin
+vendor/etc/camera/com.xiaomi.dcal.wt.fake
+vendor/etc/camera/com.xiaomi.dcal.wt4x.fake
 vendor/etc/camera/com.xiaomi.dcal.wu.fake
 vendor/etc/camera/com.xiaomi.dcal.wu.golden
-vendor/etc/camera/deblur_txt_dsp.dlc
-vendor/etc/camera/deblur_txt_gpu.dlc
-vendor/etc/camera/deblur_txt_npu.dlc
 vendor/etc/camera/det_quantize.dlc
 vendor/etc/camera/eisoverridesettings.txt
 vendor/etc/camera/eyelineblush.cng
 vendor/etc/camera/goturn_search_dsp.dlc
 vendor/etc/camera/goturn_target_dsp.dlc
+vendor/etc/camera/GpuKernelRepo.pb
 vendor/etc/camera/hdrd_ui9_params.config
+vendor/etc/camera/LDC_FPC_TUNING_DATA.bin
+vendor/etc/camera/LDC_FPC_TUNING_DATA_AI.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x03.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin
 vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/misupermoon/MobNetv2TF_0.35_iter200000_zoom2.5x_h1500w2000.dlc
 vendor/etc/camera/model.dat
 vendor/etc/camera/model_back.dlc
-vendor/etc/camera/model_back_deblur.dlc
 vendor/etc/camera/model_front.dlc
 vendor/etc/camera/model_front_mibokeh_video.dlc
+vendor/etc/camera/multianchor.txt
 vendor/etc/camera/reid_float.dlc
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/seg_quantized.dlc
@@ -475,8 +462,11 @@ vendor/etc/camera/vidhance_calibration
 
 # Camera-firmware
 vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/umi_ois.coeff
-vendor/firmware/umi_ois.prog
+vendor/firmware/cmi_tele4x_ois.coeff
+vendor/firmware/cmi_tele4x_ois.mem
+vendor/firmware/cmi_tele4x_ois.prog
+vendor/firmware/cmi_wide_ois.coeff
+vendor/firmware/cmi_wide_ois.prog
 
 # Camera-configs
 vendor/etc/public.libraries.txt
@@ -1481,7 +1471,7 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# Vendor-firmware
+# Vendor-Firmware
 vendor/firmware/AcousticGuitar_RTP.bin
 vendor/firmware/Atlantis_RTP.bin
 vendor/firmware/Bottle_RTP.bin
@@ -1529,7 +1519,6 @@ vendor/firmware/Field_Trip_RTP.bin
 vendor/firmware/Flute_RTP.bin
 vendor/firmware/Fresh_RTP.bin
 vendor/firmware/Frog_RTP.bin
-vendor/firmware/GT9896_test_sensor_1.tporder
 vendor/firmware/Gesture_UpSlide_RTP.bin
 vendor/firmware/Glee_RTP.bin
 vendor/firmware/Guitar_RTP.bin
@@ -1590,7 +1579,8 @@ vendor/firmware/firearms_ump9_RTP.bin
 vendor/firmware/firearms_vss_RTP.bin
 vendor/firmware/grenade_RTP.bin
 vendor/firmware/grenade_explosion_RTP.bin
-vendor/firmware/gtx8_test_limits.csv
+vendor/firmware/hawkeye_wide_ois.coeff
+vendor/firmware/hawkeye_wide_ois.prog
 vendor/firmware/launcher_edit_rtp.bin
 vendor/firmware/launcher_icon_selection_rtp.bin
 vendor/firmware/lockscreen_camera_entry_rtp.bin
@@ -1613,8 +1603,6 @@ vendor/firmware/scope_off_RTP.bin
 vendor/firmware/scope_on_RTP.bin
 vendor/firmware/screenshot_rtp.bin
 vendor/firmware/stm_fts_production_limits.csv
-vendor/firmware/stm_fts_production_limits_1.csv
-vendor/firmware/stm_fts_production_limits_2.csv
 vendor/firmware/task_cleanall_rtp.bin
 vendor/firmware/uninstall_animation_rtp.bin
 vendor/firmware/uninstall_dialog_rtp.bin
