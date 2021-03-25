@@ -216,6 +216,9 @@ MM_WFD += libnl
 WPA += wpa_supplicant.conf
 WPA += wpa_supplicant
 
+#XIAOMIPARTS
+XIAOMIPARTS := XiaomiParts
+
 #LLVM for RenderScript
 #use qcom LLVM
 $(call inherit-product-if-exists, external/llvm/llvm-select.mk)
@@ -263,6 +266,7 @@ PRODUCT_PACKAGES += $(THERMAL_HAL)
 PRODUCT_PACKAGES += $(USB)
 PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
+PRODUCT_PACKAGES += $(XIAOMIPARTS)
 PRODUCT_PACKAGES += $(IPACM)
 PRODUCT_PACKAGES += $(IMS_EXT)
 
