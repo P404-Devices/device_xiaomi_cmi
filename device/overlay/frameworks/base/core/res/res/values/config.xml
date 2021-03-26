@@ -356,4 +356,7 @@
     <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">90</integer>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
 </resources>
