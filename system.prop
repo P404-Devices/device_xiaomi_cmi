@@ -4,6 +4,10 @@ persist.service.btui.use_aptx=1
 persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
+# Blur
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
 # Camera
 camera.disable_zsl_mode=true
 
