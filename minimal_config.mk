@@ -31,30 +31,18 @@
 
 #INIT
 INIT := init.class_main.sh
-INIT += init.crda.sh
 INIT += init.mdm.sh
-INIT += init.mi.usb.sh
 INIT += init.qcom.class_core.sh
 INIT += init.qcom.coex.sh
 INIT += init.qcom.early_boot.sh
-INIT += init.qcom.efs.sync.sh
 INIT += init.qcom.post_boot.sh
-INIT += init.qcom.sdio.sh
-INIT += init.qcom.sensors.sh
 INIT += init.qcom.sh
 INIT += init.qcom.usb.sh
-INIT += init.qti.chg_policy.sh
 INIT += init.qti.dcvs.sh
-INIT += init.qti.qcv.sh
-INIT += mishow.sh
-INIT += playback.sh
-INIT += playback_headset.sh
-INIT += qca6234-service.sh
 INIT += init.qcom.factory.rc
 INIT += init.qcom.rc
 INIT += init.qcom.usb.rc
 INIT += init.target.rc
-INIT += init.target.wigig.rc
 INIT += fstab.qcom
 INIT += ueventd.qcom.rc
 PRODUCT_PACKAGES += $(INIT)
