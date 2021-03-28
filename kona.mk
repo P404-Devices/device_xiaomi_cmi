@@ -87,12 +87,6 @@ PRODUCT_PACKAGES += fs_config_files
 DEVICE_MANIFEST_FILE := device/xiaomi/cmi/manifest.xml
 DEVICE_MATRIX_FILE   := device/xiaomi/cmi/compatibility_matrix.xml
 
-#Kernel modules install path
-KERNEL_MODULES_ORIG := device/xiaomi/cmi/modules
-KERNEL_MODULES_DEST := $(TARGET_COPY_OUT_VENDOR)/lib/modules
-
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(KERNEL_MODULES_ORIG)/,$(KERNEL_MODULES_DEST))
-
 #MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
