@@ -84,8 +84,6 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 PRODUCT_PACKAGES += fs_config_files
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/umi/framework_manifest.xml
-
 DEVICE_MANIFEST_FILE := device/xiaomi/umi/manifest.xml
 DEVICE_MATRIX_FILE   := device/xiaomi/umi/compatibility_matrix.xml
 
