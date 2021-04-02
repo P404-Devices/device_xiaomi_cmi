@@ -33,7 +33,7 @@ USE_OPENGL_RENDERER := true
 TARGET_FS_CONFIG_GEN := device/xiaomi/cmi/config.fs
 
 #Generate DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := false
+BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Partitions (Boot)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
@@ -117,9 +117,6 @@ TARGET_KERNEL_CONFIG := vendor/cmi_defconfig
 TARGET_PREBUILT_DTB := device/xiaomi/cmi/prebuilt/dtb
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_INCLUDE_DTB_IN_BOOTIMG :=
-
-# Prebuilt DTBO
-BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/cmi/prebuilt/dtbo.img
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
