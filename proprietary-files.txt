@@ -578,19 +578,10 @@ vendor/lib64/hw/displayfeature.default.so
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/bin/displayfeature
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib/hw/displayfeature.default.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
-
-# Display-gralloc
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 
 # Display-HDR
 vendor/lib64/libhdr_tm.so
