@@ -495,26 +495,16 @@ vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 # Citsensor
 vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
 vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.0.so
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
-vendor/lib/libsensor_cal_for_citvendorservice.so
-vendor/lib/libclient2slpi.notifier.so
-vendor/lib/libnanopb.so
-vendor/lib/libssccalapi.so
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.1.so
-vendor/lib/hw/vendor.xiaomi.hardware.citvendorservice@1.0-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
+vendor/lib64/hw/vendor.xiaomi.hardware.citvendorservice@1.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
 vendor/lib64/libsensor_cal_for_citvendorservice.so
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libssccalapi.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
-vendor/lib64/hw/vendor.xiaomi.hardware.citvendorservice@1.0-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
