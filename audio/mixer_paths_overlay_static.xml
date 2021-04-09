@@ -13,6 +13,13 @@
     <ctl name="ADC2 Volume" value="6" />
     <ctl name="ADC3 Volume" value="6" />
     <ctl name="ADC4 Volume" value="6" />
+    <ctl name="TERT_MI2S_RX Channels" value="Two" />
+    <ctl name="TERT_MI2S_RX Format" value="S16_LE" />
+    <ctl name="TERT_MI2S_RX SampleRate" value="KHZ_48" />
+    <ctl name="TERT_MI2S_TX Channels" value="Two" />
+    <ctl name="TERT_MI2S_TX Format" value="S24_LE" />
+    <ctl name="TERT_MI2S_TX SampleRate" value="KHZ_48" />
+    <ctl name="USB_AUDIO_RX Format" value="S24_LE" />
     <!-- smart PA begin -->
     <!-- left smart PA -->
     <ctl name="DSP1 Firmware" value="Protection" />
@@ -20,8 +27,7 @@
     <ctl name="DRE DRE Switch" value="1" />
     <ctl name="PCM Source" value="DSP" />
     <ctl name="PCM Soft Ramp" value="4ms" />
-    <ctl name="AMP PCM Gain" value="17" />
-    <ctl name="Digital PCM Volume" value="817" />
+    <ctl name="AMP PCM Gain" value="18" />
     <ctl name="DSP Block Bypass" value="Off" />
     <ctl name="ASP TX1 Source" value="Zero" />
     <ctl name="ASP TX2 Source" value="Zero" />
@@ -32,8 +38,7 @@
     <ctl name="RCV DRE DRE Switch" value="1" />
     <ctl name="RCV PCM Source" value="DSP" />
     <ctl name="RCV PCM Soft Ramp" value="4ms" />
-    <ctl name="RCV AMP PCM Gain" value="17" />
-    <ctl name="R Digital PCM Volume" value="817" />
+    <ctl name="RCV AMP PCM Gain" value="18" />
     <ctl name="RCV DSP Block Bypass" value="Off" />
     <ctl name="RCV ASP TX1 Source" value="Zero" />
     <ctl name="RCV ASP TX2 Source" value="Zero" />
@@ -44,16 +49,9 @@
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
 
-    <!-- AMP settings-->
-    <ctl name="TERT_MI2S_RX Channels" value="Two" />
-    <ctl name="TERT_MI2S_TX Channels" value="Two" />
-    <ctl name="TERT_MI2S_TX Format" value="S32_LE" />
-    <ctl name="TERT_MI2S_RX Format" value="S32_LE" />
-    <ctl name="TERT_MI2S_TX SampleRate" value="KHZ_48" />
-    <ctl name="TERT_MI2S_RX SampleRate" value="KHZ_48" />
 
     <path name="deep-buffer-playback">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
     </path>
 
     <path name="low-latency-playback">
@@ -61,43 +59,43 @@
     </path>
 
     <path name="audio-ull-playback">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia8" value="1" />
     </path>
 
     <path name="compress-offload-playback">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback2">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback3">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia10" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia10" value="1" />
     </path>
 
     <path name="compress-offload-playback4">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia11" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia11" value="1" />
     </path>
 
     <path name="compress-offload-playback5">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia12" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia12" value="1" />
     </path>
 
     <path name="compress-offload-playback6">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia13" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia13" value="1" />
     </path>
 
     <path name="compress-offload-playback7">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia14" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia14" value="1" />
     </path>
 
     <path name="compress-offload-playback8">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia15" value="1" />
     </path>
 
     <path name="compress-offload-playback9">
-        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="audio-playback-voip">
@@ -633,6 +631,8 @@
     </path>
 
     <path name="speaker">
+       <ctl name="TERT_MI2S_RX Channels" value="Two" />
+       <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
        <ctl name="ASP TX2 Source" value="DSPTX1" />
        <ctl name="DSP RX1 Source" value="ASPRX1" />
        <ctl name="DSP RX2 Source" value="ASPRX1" />
@@ -646,6 +646,7 @@
 
     <path name="speaker-mono">
        <ctl name="TERT_MI2S_RX Channels" value="Two" />
+       <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
        <ctl name="ASP TX1 Source" value="DSPTX1" />
        <ctl name="ASP TX2 Source" value="DSPTX1" />
        <ctl name="DSP RX1 Source" value="ASPRX1" />
@@ -656,16 +657,13 @@
 
     <path name="speaker-mono-2">
        <ctl name="TERT_MI2S_RX Channels" value="Two" />
+       <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
        <ctl name="RCV DSP RX1 Source" value="ASPRX1" />
        <ctl name="RCV DSP RX2 Source" value="ASPRX1" />
        <ctl name="RCV ASP TX1 Source" value="DSPTX1" />
        <ctl name="RCV ASP TX2 Source" value="DSPTX1" />
        <ctl name="PCM Source" value="None" />
        <ctl name="RCV ASPTX Ref" value="Ref" />
-    </path>
-
-    <path name="speaker-safe">
-        <path name="speaker"/>
     </path>
 
     <path name="speaker-protected">
@@ -678,14 +676,10 @@
 
     <path name="voice-speaker">
         <path name="speaker" />
-        <ctl name="DSP Block Bypass" value="On" />
-        <ctl name="RCV DSP Block Bypass" value="On" />
     </path>
 
     <path name="voice-speaker-stereo">
         <path name="speaker" />
-        <ctl name="TERT_MI2S_TX Format" value="S24_LE" />
-        <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
         <ctl name="DSP Block Bypass" value="On" />
         <ctl name="RCV DSP Block Bypass" value="On" />
     </path>
@@ -706,18 +700,18 @@
     </path>
 
     <path name="handset-mic">
-        <ctl name="ADC1 Volume" value="12" /> <!-- We dropped the wierd calibration so restore the MIC volumes back to normal -->
-        <ctl name="ADC4 Volume" value="12 " /> 
         <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
         <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
         <ctl name="TX SMIC MUX1" value="ADC0" />
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="ADC1_MIXER Switch" value="1" />
+        <ctl name="ADC1 Volume" value="12" />
         <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
         <ctl name="TX SMIC MUX0" value="ADC3" />
         <ctl name="ADC4_MIXER Switch" value="1" />
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
+        <ctl name="ADC4 Volume" value="12" />
     </path>
 
     <path name="speaker-mic">
@@ -776,6 +770,8 @@
         <ctl name="RX INT1_1 MIX1 INP0" value="RX1" />
         <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
         <ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
+        <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
         <ctl name="RX_COMP1 Switch" value="0" />
         <ctl name="RX_COMP2 Switch" value="0" />
         <ctl name="HPHL_COMP Switch" value="0" />
@@ -788,10 +784,6 @@
         <ctl name="COMP2 Switch" value="0" />
     </path>
 
-    <path name="hph-highquality-mode">
-        <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
-    </path>
-
     <path name="hph-lowpower-mode">
         <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
     </path>
@@ -800,10 +792,10 @@
     </path>
 
     <path name="handset-stereo-dmic-ef">
-        <path name="handset-mic" />
+        <path name="handset-dmic-dual-adc" />
     </path>
 
     <path name="camcorder-dmic">
-        <path name="handset-mic" />
+        <path name="handset-dmic-dual-adc" />
     </path>
 </mixer>
