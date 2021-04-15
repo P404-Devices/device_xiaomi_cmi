@@ -157,14 +157,18 @@ NET += netutils-wrapper-1.0
 #NFC
 NFC += com.android.nfc_extras
 NFC += com.gsma.services.nfc
-NFC += libchrome.vendor
-NFC += NfcNci
+NFC += com.nxp.nfc.nq
+NFC += jcos_nq_client
+NFC += libnqnfc_nci_jni
+NFC += ls_nq_client
+NFC += nfc_nci.nqx.default.hw
+NFC += nqnfcee_access.xml
+NFC += NQNfcNci
+NFC += nqnfcse_access.xml
+NFC += se_nq_extn_client
 NFC += SecureElement
 NFC += Tag
-NFC += vendor.nxp.hardware.nfc@1.1
-NFC += vendor.nxp.hardware.nfc@2.0
-NFC += vendor.nxp.hardware.nfc@1.1.vendor
-NFC += vendor.nxp.hardware.nfc@2.0.vendor
+NFC += vendor.nxp.hardware.nfc@2.0-service
 
 #POWERSHARE
 POWERSHARE := vendor.lineage.powershare@1.0-service.xiaomi_kona

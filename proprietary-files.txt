@@ -926,17 +926,10 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/permissions/com.nxp.mifare.xml
 vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
-vendor/etc/sn100u_nfcon.pnscr
 vendor/lib/libsn100u_fw.so
-vendor/lib64/nfc_nci.nqx.default.hw.so
-vendor/lib64/se_nq_extn_client.so
 
 # OMX
 vendor/lib/libAlacSwDec.so
