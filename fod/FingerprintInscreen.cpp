@@ -31,8 +31,8 @@
 
 #define TOUCH_FOD_ENABLE 10
 
-#define FOD_SENSOR_X 441
-#define FOD_SENSOR_Y 1808
+#define FOD_SENSOR_X 439
+#define FOD_SENSOR_Y 1806
 #define FOD_SENSOR_SIZE 197
 
 namespace vendor {
