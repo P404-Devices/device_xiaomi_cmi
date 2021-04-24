@@ -325,6 +325,7 @@ INIT += init.qcom.sensors.sh
 INIT += init.qcom.crashdata.sh
 INIT += init.qcom.vendor.rc
 INIT += init.target.vendor.rc
+INIT += init.veth_ipa_config.sh
 ifeq ($(strip $(TARGET_BOARD_AUTO)),true)
 ifneq ($(strip $(ENABLE_HYP)),true)
 INIT += init.qti.can.sh
