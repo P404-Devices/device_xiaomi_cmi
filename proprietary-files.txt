@@ -1634,7 +1634,5 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/bin/hw/vendor.xiaomi.hardware.wireless@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.wireless@1.0-service.rc
 -vendor/etc/vintf/manifest/vendor.xiaomi.hardware.wireless@1.0.xml
-vendor/lib/hw/vendor.xiaomi.hardware.wireless@1.0-impl.so
-vendor/lib/vendor.xiaomi.hardware.wireless@1.0.so
 vendor/lib64/hw/vendor.xiaomi.hardware.wireless@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hardware.wireless@1.0.so
