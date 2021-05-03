@@ -44,6 +44,7 @@ INIT += init.qcom.rc
 INIT += init.qcom.usb.rc
 INIT += init.safailnet.rc
 INIT += init.target.rc
+INIT += init.veth_ipa_config.sh
 INIT += fstab.qcom
 INIT += ueventd.qcom.rc
 PRODUCT_PACKAGES += $(INIT)
