@@ -1,0 +1,4 @@
+allow vendor_sensors vendor_sysfs_graphics:dir { search };
+allow vendor_sensors vendor_sysfs_graphics:file { read };
+allow vendor_sensors vendor_sysfs_graphics:file { open };
+allow vendor_sensors vendor_sysfs_graphics:file { getattr };

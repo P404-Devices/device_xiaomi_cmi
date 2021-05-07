@@ -1,0 +1,5 @@
+get_prop({ appdomain -isolated_app }, vendor_fp_prop)
+get_prop({ appdomain -isolated_app }, vendor_tee_listener_prop)
+
+# Allow appdomain to get persist_camera_prop
+get_prop(appdomain, vendor_persist_camera_prop)

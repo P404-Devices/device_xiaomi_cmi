@@ -1,0 +1,4 @@
+allow vendor_hal_perf_default system_server:dir { search };
+allow vendor_hal_perf_default system_server:file { read };
+allow vendor_hal_perf_default system_server:file { open };
+allow vendor_hal_perf_default system_server:file { getattr };

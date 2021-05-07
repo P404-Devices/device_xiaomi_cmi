@@ -1,0 +1,3 @@
+allow init debugfs_tracing_debug:dir mounton;
+allow init hal_displayfeature_default : binder {call};
+allow init hal_touchfeature_default : binder {call};

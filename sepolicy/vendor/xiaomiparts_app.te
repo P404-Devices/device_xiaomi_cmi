@@ -1,0 +1,2 @@
+allow xiaomiparts_app hal_touchfeature_default:binder { call };
+
