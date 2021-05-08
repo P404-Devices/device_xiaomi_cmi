@@ -39,7 +39,6 @@ INIT += init.qcom.post_boot.sh
 INIT += init.qcom.sh
 INIT += init.qcom.usb.sh
 INIT += init.qti.dcvs.sh
-INIT += init.qcom.factory.rc
 INIT += init.qcom.rc
 INIT += init.qcom.usb.rc
 INIT += init.safailnet.rc
