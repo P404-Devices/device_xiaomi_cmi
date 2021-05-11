@@ -77,6 +77,132 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25
 
+#Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
+    persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.scram.enabled=false \
+    persist.vendor.qcom.bluetooth.soc=hastings \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=true \
+    ro.bluetooth.a2dp_offload.supported=true \
+    ro.vendor.bluetooth.wipower=false \
+    vendor.qcom.bluetooth.soc=hastings
+
+#Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.android.camera
+
+#Crypto
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.allow_encrypt_override=true \
+    ro.crypto.volume.filenames_mode=aes-256-cts
+
+#Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.use_layer_ext=1
+
+#DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
+#Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qfp=false
+
+#FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+#Gatekeeper
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gatekeeper.disable_spu=true
+
+#GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.backup.ntpServer=0.pool.ntp.org
+
+#Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1 \
+    persist.sys.sf.native_mode=0 \
+    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
+    ro.opengles.version=196610 \
+
+#Keystore
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore_desede=true
+
+#Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=4 \
+    debug.stagefright.omx_default_rank=0
+
+#NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.camera.notify_nfc=1
+
+#OTG
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.oem.otg_support=true
+
+#PASR
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.power.pasr.enabled=false
+
+#Qualcomm System Daemon
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcomsysd.enabled=1
+
+#Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.snapshot_enabled=0 \
+    persist.radio.snapshot_timer=0 \
+    persist.rcs.otp_sms_port=0 \
+    persist.rcs.supported=1 \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.radio.5g_mode_pref=1 \
+    persist.vendor.radio.arfcn_test_mode=3 \
+    persist.vendor.radio.bar_fake_gcell=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.efssync=true \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.vendor.radio.process_sups_ind=1 \
+    persist.vendor.radio.uicc_se_enabled=true \
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    ro.com.android.dataroaming=false
+
+#Seamless transfer
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.fflag.override.settings_seamless_transfer=true
+
+#Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.sensors.allow_non_default_discovery=true \
+    persist.vendor.sensors.sync_request=true
+
+#USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.usb.diag.func.name=diag \
+    vendor.usb.use_ffs_mtp=0
+
+#WiFi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.aware.interface=wifi-aware0
+
 #RRO configuration
 TARGET_USES_RRO := true
 

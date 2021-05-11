@@ -68,4 +68,3 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Properties
 TARGET_SYSTEM_PROP += device/xiaomi/cmi/system.prop
-TARGET_VENDOR_PROP += device/xiaomi/cmi/vendor.prop
