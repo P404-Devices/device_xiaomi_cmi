@@ -206,9 +206,6 @@ TELEPHONY_EXT_JAR += telephony-ext
 #THERMAL_HAL
 THERMAL_HAL := android.hardware.thermal@2.0-service.qti
 
-#USB
-USB := android.hardware.usb@1.2-service-qti
-
 #WIFI
 WIFI += android.hardware.wifi@1.0-service
 WIFI += libwpa_client
@@ -275,7 +272,6 @@ PRODUCT_PACKAGES += $(SENSOR)
 PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
-PRODUCT_PACKAGES += $(USB)
 PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(XIAOMIPARTS)
@@ -294,6 +290,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     telephony \
+    usb \
     wfd
 
 PRODUCT_COPY_FILES := \
