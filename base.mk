@@ -296,6 +296,9 @@ INIT += init.qti.ims.sh
 INIT += init.qcom.coex.sh
 INIT += init.qcom.early_boot.sh
 INIT += init.qcom.post_boot.sh
+ifeq ($(TARGET_BOARD_AUTO), true)
+INIT += sku-info.sh
+endif
 INIT += init.qcom.syspart_fixup.sh
 INIT += init.qcom.rc
 INIT += init.recovery.qcom.rc

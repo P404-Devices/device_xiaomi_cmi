@@ -35,6 +35,8 @@
    <bool translatable="false" name="config_wifiSoftapHeMuBeamformerSupported">true</bool>
    <!-- Wifi driver supports IEEE80211AX TWT (Target Wake Time) for softap -->
    <bool translatable="false" name="config_wifiSoftapHeTwtSupported">true</bool>
+   <!-- Enable wifi background scan support -->
+   <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
 
 </resources>
 
