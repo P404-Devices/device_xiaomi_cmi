@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from cmi MIUI 12.5.3
+# All unpinned blobs below are extracted from cmi MIUI 12.5.4
 
 # ACDB
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
