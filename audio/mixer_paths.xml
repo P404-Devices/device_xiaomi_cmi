@@ -493,6 +493,9 @@
     <ctl name="MultiMedia16 Mixer TERT_MI2S_TX" value="0" />
     <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="0" />
 
+    <!-- USB Audio Format -->
+    <ctl name="USB_AUDIO_RX Format" value="S24_LE" />
+
     <!-- ultrasound related -->
     <ctl name="Ultrasound Enable" value="Off" />
     <ctl name="Ultrasound RampDown" value="Off"/>
