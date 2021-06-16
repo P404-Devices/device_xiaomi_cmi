@@ -926,6 +926,9 @@ vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libsn100u_fw.so
 
+# NVRAM
+vendor/bin/nv_mac
+
 # OMX
 vendor/lib/libdsd2pcm.so
 vendor/lib/libOmxDsdDec.so
