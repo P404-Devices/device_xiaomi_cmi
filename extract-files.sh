@@ -55,6 +55,17 @@ if [ -z "$SRC" ]; then
     SRC=adb
 fi
 
+function remove_label() {
+    case "${1}" in
+        vendor/etc/init/init.mi_thermald.rc)
+            sed -i "/seclabel/d" "${2}"
+            ;;
+        vendor/etc/init/init.batterysecret.rc)
+            sed -i "/seclabel/d" "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper for common device
 setup_vendor "$DEVICE" "$VENDOR" "$ROOT" false "$CLEAN_VENDOR"
 
