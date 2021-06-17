@@ -103,6 +103,10 @@ HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
 #HOSTAPD
 HOSTAPD := hostapd
 
+#IFAA
+IFAA := org.ifaa.android.manager
+IFAA_JAR := org.ifaa.android.manager
+
 #IMS Extension module for Android Telephony
 IMS_EXT := ims-ext-common
 IMS_EXT += ims_ext_common.xml
@@ -250,6 +254,8 @@ PRODUCT_PACKAGES += $(HEALTH)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(HIDL)
 PRODUCT_PACKAGES += $(HIDL_WRAPPER)
+PRODUCT_PACKAGES += $(IFAA)
+PRODUCT_BOOT_JARS += $(IFAA_JAR)
 PRODUCT_PACKAGES += $(IR)
 PRODUCT_PACKAGES += $(LIB_XML2)
 PRODUCT_PACKAGES += $(LIBMEMTRACK)
