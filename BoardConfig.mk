@@ -160,7 +160,7 @@ TARGET_PD_SERVICE_ENABLED := true
 TARGET_PER_MGR_ENABLED := true
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/cmi:libfod_extension.kona
+TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/cmi:libfod_extension
 
 # Dex
 ifeq ($(HOST_OS),linux)
