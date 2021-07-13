@@ -2893,6 +2893,9 @@
         <path name="speaker-mono"/>
     </path>
 
+    <path name="speaker-safe-gain-default">
+    </path>
+
    <path name="sidetone-iir">
         <ctl name="IIR0 Enable Band1" value="1" />
         <ctl name="IIR0 Enable Band2" value="1" />
@@ -3193,8 +3196,8 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
-        <ctl name="TX_DEC1 Volume" value="92" />
-        <ctl name="TX_DEC4 Volume" value="92" />
+        <ctl name="TX_DEC1 Volume" value="86" />
+        <ctl name="TX_DEC4 Volume" value="86" />
     </path>
 
     <path name="camcorder-mic">
@@ -3351,6 +3354,31 @@
         <ctl name="ADC2 Volume" value="6" />
         <ctl name="TX DMIC MUX1" value="DMIC3" />
         <ctl name="TX DMIC MUX2" value="DMIC0" />
+        <ctl name="TX DMIC MUX3" value="DMIC2" />
+    </path>
+
+   <path name="camcorder-tmic-azoom">
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Three" />
+        <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX0" value="ADC0" />
+        <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
+        <ctl name="ADC1_MIXER Switch" value="1" />
+        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX1" value="ADC3" />
+        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
+        <ctl name="ADC4_MIXER Switch" value="1" />
+        <ctl name="ADC4 MUX" value="INP5" />
+        <ctl name="ADC4 Volume" value="6" />
+        <ctl name="TX DEC2 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX2" value="ADC2" />
+        <ctl name="TX_AIF1_CAP Mixer DEC2" value="1" />
+        <ctl name="ADC3_MIXER Switch" value="1" />
+        <ctl name="ADC3 MUX" value="INP4" />
+        <ctl name="HDR34 MUX" value="NO_HDR34" />
+        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="TX DMIC MUX1" value="DMIC0" />
+        <ctl name="TX DMIC MUX2" value="DMIC1" />
         <ctl name="TX DMIC MUX3" value="DMIC2" />
     </path>
 
