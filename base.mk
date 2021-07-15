@@ -46,6 +46,11 @@ AUDIO_HAL += libhfp
 AUDIO_HAL += libsndmonitor
 AUDIO_HAL += libqcomvoiceprocessing
 
+#AVB
+AVB += q-gsi.avbpubkey
+AVB += r-gsi.avbpubkey
+AVB += s-gsi.avbpubkey
+
 #BLUETOOTH_HAL
 BLUETOOTH_HAL += android.hardware.bluetooth.audio@2.0-impl
 BLUETOOTH_HAL += audio.bluetooth.default
@@ -241,6 +246,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += $(ANT)
 PRODUCT_PACKAGES += $(ATRACE_HAL)
 PRODUCT_PACKAGES += $(AUDIO_HAL)
+PRODUCT_PACKAGES += $(AVB)
 PRODUCT_PACKAGES += $(BLUETOOTH_HAL)
 PRODUCT_PACKAGES += $(CAMERA)
 PRODUCT_PACKAGES += $(C2DCC)
