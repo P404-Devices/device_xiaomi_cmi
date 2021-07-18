@@ -966,27 +966,27 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
-# Perf - from LA.UM.9.12.r1-11500-SMxx50.0
+# Perf - from LA.UM.9.12.r1-11800-SMxx50.0
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|8e6cf9adfd871a5f474dd45453be5a1f2321f1b0
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/etc/perf/commonresourceconfigs.xml|1e5fd2e4612b61371cda4114c9091430f6d5fb1c
+vendor/etc/perf/commonresourceconfigs.xml|c80efdafc6c5ef4fe0602f4ffe3137092513db38
 vendor/etc/perf/perfboostsconfig.xml|905f1a3b060e6a6f8509e2a356a9d6abfb18b29f
 vendor/etc/perf/perfconfigstore.xml|cb7dc88156dca524812238165eed2365eabf5b3e
 vendor/etc/perf/targetconfig.xml|e257a9782c8548d371c79bf224bcecdd8074eb9e
-vendor/etc/perf/targetresourceconfigs.xml|99f27cd5a5003da33c07cfafc7b3b9e10a062459
+vendor/etc/perf/targetresourceconfigs.xml|7be09ffdc8b1108b6df6673fcf5004ec7366ec88
 vendor/lib/libqti-iopd-client.so|795f30939075aff7a57973d682bdd6c22f26a53d
-vendor/lib/libqti-iopd.so|32a5731c507d4e267d9ddbd845887e0c560f4baa
+vendor/lib/libqti-iopd.so|67c09d9a2a179f043816b824b5209df2f7e671bc
 vendor/lib/vendor.qti.hardware.iop@1.0.so|ed1c0d67a740e95d5b2c37265ccaae3723c08941
 vendor/lib/vendor.qti.hardware.iop@2.0.so|b9339c98fc47f050e5288d5b27e09d274531206d
 vendor/lib64/libqti-iopd-client.so|9e7561634158cd01b037e740e51cb22cd1119e04
-vendor/lib64/libqti-iopd.so|442b8813a1b29f0be0078645a7d74912dd9cc3b1
+vendor/lib64/libqti-iopd.so|885075e7a40e7ee0ef4943a9623ca370cf53f702
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|794c859e9a405fbe1dc136968725d4dd1bd00cd6
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|6ea000253406ccfc651855c6efe0a7eda52184f6
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|fe7058011bbaf7dd2a35dce409c6dd312d9e0d3d
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|1e663df69249c93bef471e66aa70d9fe1d463c99
 vendor/etc/lm/AdaptLaunchFeature.xml|8ae6bcaa5ffc9be775b83814d09e41286e7894ba
 vendor/etc/lm/AppClassifierFeature.xml|ae52a9a4c9e765f02ef71a17b348dab7a98f7a71
-vendor/etc/lm/GameOptimizationFeature.xml|9a83a573904a4fd9cc98b5847e9304ed9512a8dd
+vendor/etc/lm/GameOptimizationFeature.xml|022aff2da0a6cb241d87314bd19062de94544ba0
 vendor/lib/libperfconfig.so|6a9eea50f488927daeea3e5413ffb4b4e2c78cee
 vendor/lib/libperfgluelayer.so|a29e6366e0f36941aeb8a6ea880573b5020743d7
 vendor/lib/libperfioctl.so|39e347388dfc6d7c48f32db58d56e1c8b54b20e1
@@ -997,9 +997,9 @@ vendor/lib/libqti-utils.so|f0396512d699825cd405cd87f59b019ae05e3f81
 vendor/lib/vendor.qti.hardware.perf@2.0.so|81feb5db9c39a87394c9452909539de7cf9de0bd
 vendor/lib/vendor.qti.hardware.perf@2.1.so|c7c7088be2ad6c8050798c981b0abf3e3264b924
 vendor/lib/vendor.qti.hardware.perf@2.2.so|6452c97202a60759849cd19fb870a470f164ddbf
-vendor/lib64/libadaptlaunch.so|2b54537bfa34aa85ce3303eab0d33e182f349683
-vendor/lib64/libappclassifier.so|297a63a2e30ea287ed901b7ee6de4b63f70fd04b
-vendor/lib64/libgameoptfeature.so|df596abb2c3e0958885a8af9d3ed7c4df728bdb4
+vendor/lib64/libadaptlaunch.so|c1d7afa8b862202f50ea990a1d2e79d21461e8dd
+vendor/lib64/libappclassifier.so|5e6bdffc0b58243ea72452e18fe9268598307553
+vendor/lib64/libgameoptfeature.so|b6b858871794c42127d8a418228834a2e3216506
 vendor/lib64/liblearningmodule.so|7526d5e7bbe85621fab8705826fa878721949229
 vendor/lib64/libmeters-ns.so|7f7760a0d864ae8faf6b6ffc3b79b0bb687a79b4
 vendor/lib64/libmeters.so|06e92ebe0a02c862479995a9d74507fff14a633b
