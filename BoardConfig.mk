@@ -194,6 +194,9 @@ USE_SENSOR_MULTI_HAL := true
 # Screen
 TARGET_SCREEN_DENSITY := 420
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+
 # USB
 TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY := true
 
