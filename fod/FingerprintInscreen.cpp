@@ -140,8 +140,8 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
 
     if (brightness == 9.0) {
         alpha = 0.9619584887;
-    } else if (brightness > 40) {
-        alpha = 1.0 - pow(((((brightness * 1.0) / 255.0) * 430.0) / 600.0), 0.455);
+    } else if (brightness > 30) {
+        alpha = 1.0 - pow(((((brightness * 1.0) / 255.0) * 420.0) / 600.0), 0.455);
     } else {
         alpha = 1.0 - pow((brightness * 1.0) / 210.0, 0.455);
     }
