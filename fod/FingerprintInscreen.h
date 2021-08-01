@@ -18,7 +18,6 @@
 #define VENDOR_LINEAGE_BIOMETRICS_FINGERPRINT_INSCREEN_V1_0_FINGERPRINTINSCREEN_H
 
 #include <vendor/lineage/biometrics/fingerprint/inscreen/1.0/IFingerprintInscreen.h>
-#include <vendor/xiaomi/hardware/displayfeature/1.0/IDisplayFeature.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
 #include <vendor/xiaomi/hardware/touchfeature/1.0/ITouchFeature.h>
 
@@ -33,7 +32,6 @@ namespace implementation {
 using ::android::sp;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
-using ::vendor::xiaomi::hardware::displayfeature::V1_0::IDisplayFeature;
 using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
 using ::vendor::xiaomi::hardware::touchfeature::V1_0::ITouchFeature;
 
@@ -57,8 +55,7 @@ public:
     Return<void> setCallback(const sp<IFingerprintInscreenCallback>& callback) override;
 
 private:
-    sp<IDisplayFeature> xiaomiDisplayFeatureService;
-    sp<ITouchFeature> touchFeatureService;
+    sp<ITouchFeature> xiaomiTouchFeatureService;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
 
     std::mutex mCallbackLock;

@@ -82,7 +82,7 @@ DRM += android.hardware.drm@1.3-service.clearkey
 FASTBOOTD += fastbootd
 
 #FOD
-FOD := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona
+FOD := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cmi
 
 #framework detect libs
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
