@@ -265,30 +265,6 @@ service dc_cal /vendor/bin/dc_cal
     disabled
     oneshot
 
-service displayfeature /vendor/bin/displayfeature
-    class late_start
-    user root
-    group root
-
-on property:init.svc.surfaceflinger=stopped
-    stop displayfeature
-
-on property:init.svc.surfaceflinger=running
-    start displayfeature
-
-on property:init.svc.surfaceflinger=restarting
-    stop displayfeature
-
-service displaycount /vendor/bin/displaycount
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start displaycount
-
 service vendor.nv_mac /vendor/bin/nv_mac
     class late_start
     user system
