@@ -1078,6 +1078,7 @@ vendor/lib64/libwvkeybox.so
 vendor/lib64/ls_nq_client.so
 
 # Sensors
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
@@ -1297,6 +1298,7 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchfeature
+vendor/bin/toucheventcheck
 vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc
 vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so
