@@ -169,22 +169,6 @@ MM_VIDEO += libstagefrighthw
 #NET
 NET += netutils-wrapper-1.0
 
-#NFC
-NFC += com.android.nfc_extras
-NFC += com.gsma.services.nfc
-NFC += com.nxp.nfc.nq
-NFC += jcos_nq_client
-NFC += libnqnfc_nci_jni
-NFC += ls_nq_client
-NFC += nfc_nci.nqx.default.hw
-NFC += nqnfcee_access.xml
-NFC += NQNfcNci
-NFC += nqnfcse_access.xml
-NFC += se_nq_extn_client
-NFC += SecureElement
-NFC += Tag
-NFC += vendor.nxp.hardware.nfc@2.0-service
-
 #POWERSHARE
 POWERSHARE := vendor.lineage.powershare@1.0-service.xiaomi_kona
 
@@ -279,7 +263,6 @@ PRODUCT_PACKAGES += $(MM_CORE)
 PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(NET)
-PRODUCT_PACKAGES += $(NFC)
 PRODUCT_PACKAGES += $(POWERSHARE)
 PRODUCT_PACKAGES += $(QMI)
 PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
@@ -303,6 +286,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    nq-nfc \
     overlay \
     perf \
     telephony \
@@ -351,15 +335,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \

@@ -871,11 +871,10 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-vendor/etc/permissions/com.nxp.mifare.xml
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-vendor/lib/libsn100u_fw.so
+# NFC - from LA.UM.9.12.r1-12000-SMxx50.0
+vendor/etc/libnfc-mtp-SN100.conf|a9570f1f620dcad9b9d5fe24eb3255c3f13c6099
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf|bfe54a5b7d327c11a0b160b651f5c3e7dd927ef6
+vendor/lib/libsn100u_fw.so|2bc1887b71b4557b75e26465f6917525bfd43e4a
 
 # NVRAM
 vendor/bin/nv_mac
@@ -1072,10 +1071,8 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/jcos_nq_client.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libwvkeybox.so
-vendor/lib64/ls_nq_client.so
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh
