@@ -203,6 +203,9 @@ TELEPHONY_EXT_JAR += telephony-ext
 #THERMAL_HAL
 THERMAL_HAL := android.hardware.thermal@2.0-service.qti
 
+#VNDK
+VNDK := vndservicemanager
+
 #WIFI
 WIFI += android.hardware.wifi@1.0-service
 WIFI += libwpa_client
@@ -272,6 +275,7 @@ PRODUCT_PACKAGES += $(SENSOR)
 PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
+PRODUCT_PACKAGES += $(VNDK)
 PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(XIAOMIPARTS)
