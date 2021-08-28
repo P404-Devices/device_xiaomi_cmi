@@ -815,7 +815,6 @@ vendor/etc/init/android.hardware.lights-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.lights-qti.xml
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.kona.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
@@ -826,7 +825,6 @@ vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.kona.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
