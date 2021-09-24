@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from cmi MIUI 12.5.4
+# All unpinned blobs below are extracted from cmi MIUI 12.5.8
 
 # ACDB
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
@@ -103,9 +103,11 @@ vendor/lib64/libqtigef.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 
 # Audio-hardware
+vendor/lib/libresampler.so
 vendor/lib/libtinycompress.so
 vendor/lib/hw/audio.primary.kona.so
 vendor/lib64/libtinycompress.so
+vendor/lib64/libresampler.so
 vendor/lib64/hw/audio.primary.kona.so
 
 # Audio-Offload
