@@ -23,13 +23,13 @@ vendor/lib64/libacdbrtac.so
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc
 vendor/lib/libadsp_default_listener.so
--vendor/lib/libadsprpc.so
+vendor/lib/libadsprpc.so
 vendor/lib/libmdsprpc.so
--vendor/lib/libsdsprpc.so
+vendor/lib/libsdsprpc.so
 vendor/lib64/libadsp_default_listener.so
--vendor/lib64/libadsprpc.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libmdsprpc.so
--vendor/lib64/libsdsprpc.so
+vendor/lib64/libsdsprpc.so
 
 # ADSP-modules-Hexagon
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
@@ -101,6 +101,9 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/libqtigef.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
+
+# Audio-config
+vendor/etc/cirrus.cfg
 
 # Audio-firmware
 vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw
