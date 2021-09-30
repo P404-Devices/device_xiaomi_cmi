@@ -30,20 +30,14 @@
 # Minimal configuration definition for basic boot to shell
 
 #INIT
-INIT := init.class_main.sh
 INIT += init.mdm.sh
-INIT += init.qcom.class_core.sh
-INIT += init.qcom.coex.sh
-INIT += init.qcom.early_boot.sh
 INIT += init.qcom.post_boot.sh
 INIT += init.qcom.sh
 INIT += init.qcom.usb.sh
-INIT += init.qti.dcvs.sh
 INIT += init.qcom.rc
 INIT += init.qcom.usb.rc
 INIT += init.safailnet.rc
 INIT += init.target.rc
-INIT += init.veth_ipa_config.sh
 INIT += fstab.qcom
 INIT += ueventd.qcom.rc
 PRODUCT_PACKAGES += $(INIT)
@@ -52,8 +46,7 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/cmi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/cmi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    device/xiaomi/cmi/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
+    device/xiaomi/cmi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
