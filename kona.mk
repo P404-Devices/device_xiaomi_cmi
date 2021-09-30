@@ -264,9 +264,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
 
-#Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
-
 #Audio
 PRODUCT_COPY_FILES += \
     device/xiaomi/cmi/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \

@@ -204,6 +204,9 @@ TELEPHONY_EXT_JAR += telephony-ext
 #THERMAL_HAL
 THERMAL_HAL := android.hardware.thermal@2.0-service.qti
 
+#VIBRATOR
+VIBRATOR := vendor.qti.hardware.vibrator.service.xiaomi_cmi
+
 #VNDK
 VNDK := vndservicemanager
 
@@ -276,6 +279,7 @@ PRODUCT_PACKAGES += $(SENSOR)
 PRODUCT_PACKAGES += $(TELEPHONY_EXT)
 PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
+PRODUCT_PACKAGES += $(VIBRATOR)
 PRODUCT_PACKAGES += $(VNDK)
 PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
