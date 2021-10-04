@@ -112,7 +112,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_USES_UNCOMPRESSED_KERNEL := false
 TARGET_KERNEL_NEW_GCC_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CONFIG := vendor/cmi_user_defconfig
+TARGET_KERNEL_CONFIG := cmi_defconfig
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
