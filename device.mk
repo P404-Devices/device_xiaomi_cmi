@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -121,8 +121,8 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.umi \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_umi
+    android.hardware.biometrics.fingerprint@2.1-service.cmi \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cmi
 
 PRODUCT_PACKAGES += \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
@@ -303,8 +303,8 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
-    UmiFrameworks \
-    UmiSystemUI \
+    CmiFrameworks \
+    CmiSystemUI \
     WifiResCommon \
     WifiResTarget
 
@@ -393,7 +393,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi_umi
+    vendor.qti.hardware.vibrator.service.xiaomi_cmi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

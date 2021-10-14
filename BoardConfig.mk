@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/umi
+DEVICE_PATH := device/xiaomi/cmi
 
 # AVB
 BOARD_AVB_ENABLE := true
@@ -34,7 +34,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := umi
+TARGET_OTA_ASSERT_DEVICE := cmi
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -126,7 +126,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CONFIG := umi_defconfig
+TARGET_KERNEL_CONFIG := cmi_defconfig
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -216,4 +216,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/xiaomi/umi/BoardConfigVendor.mk
+include vendor/xiaomi/cmi/BoardConfigVendor.mk

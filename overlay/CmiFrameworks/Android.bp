@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "UmiSystemUI",
+    name: "CmiFrameworks",
     vendor: true,
 }
