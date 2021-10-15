@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cmi.mk
+    $(LOCAL_DIR)/aosp_cmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_cmi-eng \
-    lineage_cmi-user \
-    lineage_cmi-userdebug
+    aosp_cmi-eng \
+    aosp_cmi-user \
+    aosp_cmi-userdebug

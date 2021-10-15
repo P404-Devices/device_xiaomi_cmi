@@ -12,9 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cmi/device.mk)
 
 # Inherit from the Lineage configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_cmi
+# Set Boot Animination Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+PRODUCT_NAME := aosp_cmi
 PRODUCT_DEVICE := cmi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 10 Pro
