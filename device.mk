@@ -21,6 +21,7 @@ $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 
 # Platform
 PRODUCT_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM := kona
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
