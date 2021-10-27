@@ -31,3 +31,4 @@ baseband=`getprop ro.baseband`
 if [ "$baseband" = "mdm" ] || [ "$baseband" = "mdm2" ]; then
 	start vendor.mdm_helper
 fi
+

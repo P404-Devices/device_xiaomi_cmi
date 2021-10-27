@@ -199,21 +199,20 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.mdm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.safailnet.rc \
-    init.target.rc \
     fstab.qcom \
+    init.mdm.sh \
+    init.mi.usb.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qti.dcvs.sh \
+    init.target.rc\
+    init.xiaomi.rc \
     ueventd.qcom.rc
 
 # IPACM
@@ -375,6 +374,13 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service-qti
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
