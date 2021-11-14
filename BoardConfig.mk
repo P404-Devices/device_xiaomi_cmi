@@ -180,9 +180,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-01
-
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
