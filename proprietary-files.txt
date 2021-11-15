@@ -121,7 +121,7 @@ vendor/lib64/libresampler.so
 vendor/lib64/libssrec.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 
-# Audio Configs
+# Audio-Configs
 vendor/etc/audio_configs.xml
 vendor/etc/audio_configs_stock.xml
 vendor/etc/audio_effects.conf
@@ -131,6 +131,7 @@ vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_tuning_mixer.txt
 vendor/etc/cirrus.cfg
+vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
 vendor/etc/mixer_paths_overlay_dynamic.xml
 vendor/etc/mixer_paths_overlay_static.xml
