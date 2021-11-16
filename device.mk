@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
-    init.qti.dcvs.sh \
+    init.safailnet.rc \
     init.target.rc\
     init.xiaomi.rc \
     ueventd.qcom.rc
