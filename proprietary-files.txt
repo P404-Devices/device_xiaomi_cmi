@@ -570,18 +570,18 @@ vendor/etc/ltm_config_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/mdss_dsi_j2_p2_1_38_0c_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.xml
 
-# Display-Hardware - from LA.UM.9.12.r1-12000-SMxx50.0
+# Display-Hardware - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/lib64/libdisp-aba.so|902839da31464e54bd4756747db2dd7ad867484f
-vendor/lib64/libdisplayqos.so|949be5d7caeb0c3c566beee79f872d4b4e45c280
-vendor/lib64/libdisplayskuutils.so|3846f08d2d23088f830cc89d6727a1ca2a89bde9
+vendor/lib64/libdisplayqos.so|56cfe5471e5c282ac83a31e5b155342ade8c08d0
+vendor/lib64/libdisplayskuutils.so|3ddb2ffe55aa9aef686cf3be00ae5e0d1d8f9d93
 vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
 vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
 vendor/lib64/libsdedrm.so|7ca95a25bfccb45cd8776ab49b278a14a3faf740
 vendor/lib64/libsdm-color.so|29cbc16f6fa573d21f48e2be2ff0d51de3357378
 vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
-vendor/lib64/libsdm-diag.so|a237a8e628026fef25ca9eaa3ebcbbf56489be9a
-vendor/lib64/libsdm-disp-vndapis.so|ba6a9d52f0635d5ad5e440b403a9af2cd0fbac2a
-vendor/lib64/libsdmextension.so|b6b24dd7b4a3d1de51da000e59e39af8efc785cc
+vendor/lib64/libsdm-diag.so|f532f28a93bb8568652579ea97267d3053ad9cfe
+vendor/lib64/libsdm-disp-vndapis.so|fd0b0beac164c92bfa012dbc059cb50cdde2dec6
+vendor/lib64/libsdmextension.so|99377ab065105f0cbd17bbe5907cdbb8027a9f17
 vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
 
 # DPM
