@@ -4,6 +4,9 @@ allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perm
 
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
+allow hal_fingerprint_default sysfs_fod:file { open };
+allow hal_fingerprint_default sysfs_fod:file { read };
+
 # Allow hal_fingerprint_default to read and write to
 # fingerprint_device/input_device/tee_device/uhid_device
 allow hal_fingerprint_default {
