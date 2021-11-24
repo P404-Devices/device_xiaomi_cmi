@@ -1,3 +1,6 @@
 allow hal_health_default sysfs_wakeup:dir r_dir_perms;
 allow hal_health_default sysfs_wakeup:file r_file_perms;
+allow hal_health_default sysfs:file { open };
+allow hal_health_default sysfs:file { read };
+allow hal_health_default sysfs:file { getattr };
 r_dir_file(hal_health_default, vendor_sysfs_battery_supply)
