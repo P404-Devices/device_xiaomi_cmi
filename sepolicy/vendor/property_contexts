@@ -1,8 +1,10 @@
 # Camera
 persist.camera.                             u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                           u:object_r:vendor_camera_prop:s0
+vendor.camera.                              u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.                       u:object_r:vendor_camera_sensor_prop:s0
 vendor.camera.boot_complete                 u:object_r:vendor_camera_prop:s0
+vendor.camera.aux.                          u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp.                      u:object_r:vendor_fp_prop:s0

@@ -1,0 +1,1 @@
+allow flags_health_check aac_drc_prop:file { open getattr map };

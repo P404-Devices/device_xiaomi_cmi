@@ -1,0 +1,2 @@
+allow vendor_cnd vendor_diag_device:chr_file { open read write };
+allow vendor_cnd wifi_hal_prop:file { open read };
