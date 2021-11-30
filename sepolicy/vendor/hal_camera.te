@@ -1,2 +1,5 @@
 # Allow camera hal to set camera sensor properties
 set_prop(hal_camera, vendor_camera_sensor_prop)
+
+# Allow camera hal to get camera sensor properties
+get_prop(hal_camera, vendor_ro_camera_prop)
