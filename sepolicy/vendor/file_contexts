@@ -50,15 +50,6 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                            u:object_r:persist_subsys_file:s0
 
-# Pixel Powerhal
-/vendor/bin/hw/android\.hardware\.power-service\.cmi-libperfmgr                                        u:object_r:hal_power_default_exec:s0
-
-# Pixel Powerstats
-/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.cmi                                       u:object_r:hal_power_stats_default_exec:s0
-
-# Pixel Thermalhal
-/vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.cmi                                            u:object_r:hal_thermal_default_exec:s0
-
 # Sensors
 /sys/bus/iio/devices                                                                                                                u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1(/.*)?            u:object_r:vendor_sysfs_iio:s0
