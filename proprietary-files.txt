@@ -573,6 +573,8 @@ vendor/lib64/libdisp-aba.so|902839da31464e54bd4756747db2dd7ad867484f
 vendor/lib64/libdisplayqos.so|56cfe5471e5c282ac83a31e5b155342ade8c08d0
 vendor/lib64/libdisplayskuutils.so|3ddb2ffe55aa9aef686cf3be00ae5e0d1d8f9d93
 vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
+vendor/lib64/libhdrdynamic.so|5f25a3b1ff5e58c317652c3b02d52d19cfb77315
+vendor/lib64/libhdrdynamicootf.so|538384bf34a18a001e0a8761d3fa3ab571bda128
 vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
 vendor/lib64/libsdedrm.so|7ca95a25bfccb45cd8776ab49b278a14a3faf740
 vendor/lib64/libsdm-color.so|29cbc16f6fa573d21f48e2be2ff0d51de3357378
