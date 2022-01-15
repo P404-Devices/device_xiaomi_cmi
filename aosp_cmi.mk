@@ -28,4 +28,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILD_FINGERPRINT := Xiaomi/cmi/cmi:11/RKQ1.200826.002/V12.5.10.0.RJBCNXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/cmi/cmi:12/SKQ1.211006.001/V13.0.3.0.SJACNXM:user/release-keys
