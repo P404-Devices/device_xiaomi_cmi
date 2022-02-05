@@ -23,6 +23,9 @@ vendor.panel.display                        u:object_r:vendor_panel_prop:s0
 vendor.panel.touch_vendor                   u:object_r:vendor_panel_prop:s0
 vendor.panel.vendor                         u:object_r:vendor_panel_prop:s0
 
+# Sensors
+persist.sensor.sardisable                   u:object_r:vendor_sensors_prop:s0
+
 # Thermal
 vendor.sys.thermal.                         u:object_r:vendor_thermal_normal_prop:s0
 
