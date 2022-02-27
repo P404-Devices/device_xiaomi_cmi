@@ -275,14 +275,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     P404CmiSettings \
     P404CmiSystemUI \
-    CarrierConfigResCommon \
-    FrameworksResCommon \
     FrameworksResTarget \
-    SystemUIResCommon \
-    TelephonyResCommon \
     CmiFrameworks \
     CmiSystemUI \
-    WifiResCommon \
     WifiResTarget
 
 # Partitions
@@ -302,6 +297,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    overlay \
     perf \
     telephony
 
