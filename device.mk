@@ -318,6 +318,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
