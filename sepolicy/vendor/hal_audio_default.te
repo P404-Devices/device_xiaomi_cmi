@@ -10,6 +10,9 @@ allow hal_audio_default sysfs_f0_value:file rw_file_perms;
 # Allow Audio hal to read and write to ultrasound device
 allow hal_audio_default sound_device:chr_file rw_file_perms;
 
+# Allow Audio hal to read and write to diag services
+allow hal_audio_default vendor_diag_device:chr_file rw_file_perms;
+
 # Allow Audio hal to call Sensors
 binder_call(hal_audio_default, hal_sensors_default)
 

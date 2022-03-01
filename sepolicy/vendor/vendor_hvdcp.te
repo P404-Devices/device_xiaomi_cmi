@@ -1,2 +1,3 @@
 allow vendor_hvdcp sysfs:file { getattr open read };
 allow vendor_hvdcp sysfs_power_supply:dir { search };
+allow vendor_hvdcp sysfs_power_supply:file { open read getattr };

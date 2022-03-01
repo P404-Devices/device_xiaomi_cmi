@@ -1,1 +1,1 @@
-allow vendor_netmgrd vendor_diag_device:chr_file { open read write };
+allow vendor_netmgrd vendor_diag_device:chr_file { open read write ioctl };
