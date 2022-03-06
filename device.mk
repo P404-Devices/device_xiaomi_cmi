@@ -29,7 +29,6 @@ $(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 
 # Platform
-PRODUCT_BOARD_PLATFORM := kona
 TARGET_BOARD_PLATFORM := kona
 
 # Additional native libraries
