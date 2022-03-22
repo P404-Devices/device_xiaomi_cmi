@@ -6,7 +6,7 @@
 <resources>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">40dp</dimen>
+    <dimen name="status_bar_height">40dp</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
     <!-- Default radius of the software rounded corners. -->
