@@ -87,8 +87,12 @@ TARGET_USES_FOD_ZPOS := true
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_cmi
 
 # HIDL
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/vendor_framework_compatibility_matrix.xml \
+    vendor/aosp/config/device_framework_matrix.xml
+
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
-DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
@@ -115,7 +119,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CONFIG := vendor/cmi_user_defconfig
+TARGET_KERNEL_CONFIG := cmi_defconfig
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
