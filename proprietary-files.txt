@@ -1154,6 +1154,7 @@ vendor/radio/qcril_database/qcril.db
 
 # RIL (IMS)
 system/etc/permissions/privapp-permissions-qti.xml
+system/etc/sysconfig/qti_whitelist.xml
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
