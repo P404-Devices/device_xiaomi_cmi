@@ -666,7 +666,6 @@ vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod
 vendor/lib64/libgf_hal.so
 
 # FM
-vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
