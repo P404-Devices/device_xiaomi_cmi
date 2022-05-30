@@ -17,7 +17,6 @@ persist.dbg.wfc_avail_ovr=1
 
 # IOP
 vendor.iop.enable_prefetch_ofr=1
-vendor.iop.enable_uxe=1
 
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
