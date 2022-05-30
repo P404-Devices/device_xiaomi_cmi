@@ -2,12 +2,6 @@
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
 
-# CNE
-persist.vendor.cne.feature=1
-
-# DPM
-persist.vendor.dpm.feature=1
-
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 persist.sys.gps.fence=true
