@@ -55,6 +55,8 @@ genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-3/3-0049/wakeup             
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0066/wakeup                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0066/wakeup/wakeup64                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0066/power_supply/bq2597x-standalone/wakeup                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/884000.i2c/i2c-4/4-0055/power_supply/bms/wakeup68                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/884000.i2c/i2c-4/4-0055/power_supply/bms/wakeup68/event_count                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0065/power_supply/bq2597x-master/wakeup76/event_count                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0055/power_supply/lionsemi/wakeup                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0067/wakeup                                                                         u:object_r:sysfs_wakeup:s0
