@@ -580,13 +580,13 @@ vendor/etc/ltm_config_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/mdss_dsi_j2_p2_1_38_0c_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.xml
 
-# Display-Hardware - from LA.UM.9.12.r1-14100-SMxx50.0
+# Display-Hardware - from LA.UM.9.12.r1-14100.02-SMxx50.0
 vendor/lib64/libdisp-aba.so|902839da31464e54bd4756747db2dd7ad867484f
 vendor/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
 vendor/lib64/libdisplayskuutils.so|1ebb27593b446d5be3300646bf86c8b5b9e59f65
 vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
 vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
-vendor/lib64/libsdedrm.so|7ca95a25bfccb45cd8776ab49b278a14a3faf740
+vendor/lib64/libsdedrm.so|aef0bebe7cef18aa1d23c565b2ef6cc5f6ec4779
 vendor/lib64/libsdm-color.so|09e14227de5d3690a11d523d9e76148ed3327e97
 vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
 vendor/lib64/libsdm-diag.so|57e8b57e52b98a0a151434414756fcf91147a511
@@ -1084,6 +1084,9 @@ vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
+# RIL (IMS) - from LA.UM.9.12.r1-14100.02-SMxx50.QSSI12.0
+vendor/etc/init/imsrcsd.rc|2dc42ff6e4b6dd389bd3bc9a7af30dec2f1a45df
+
 # RIL (IMS)
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
@@ -1092,7 +1095,6 @@ vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdatadaemon.rc
 vendor/etc/init/imsqmidaemon.rc
-vendor/etc/init/imsrcsd.rc
 vendor/etc/seccomp_policy/imsrtp.policy
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
