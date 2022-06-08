@@ -21,15 +21,14 @@
     <!-- Dirac settings -->
     <string name="dirac_enable">Enable dirac</string>
     <string name="dirac_title">Dirac sound enhancer</string>
+    <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Headset type</string>
-    <string name="dirac_hifi_enable_title"> Enable Hi-fi</string>
+    <string name="dirac_hifi_enable_title">Enable Hi-Fi</string>
     <string name="dirac_preset_title">Sound preset</string>
 
-    <!-- Dirac settings: Hi-Fi -->
     <string name="dirac_hifi_title">Hi-Fi</string>
     <string name="dirac_hifi_summary">Decrease noise and Distortion and increase audio quality</string>
 
-    <!-- Dirac settings: headset profiles -->
     <string name="dirac_headset_default">Default</string>
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
@@ -53,7 +52,6 @@
     <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
     <string name="dirac_headset_earphone">Mi Earphones</string>
 
-    <!-- Dirac settings: presets -->
     <string name="dirac_preset_default">Default</string>
     <string name="dirac_preset_rock">Rock</string>
     <string name="dirac_preset_jazz">Jazz</string>
@@ -65,5 +63,11 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
+
+    <string name="dirac_headset_optimization">Sound optimization</string>
+    <string name="dirac_headset_scenario_intelligent">Smart</string>
+    <string name="dirac_headset_scenario_music">Music</string>
+    <string name="dirac_headset_scenario_video">Video</string>
+    <string name="dirac_headset_scenario_vocal">Voice</string>
 
 </resources>
