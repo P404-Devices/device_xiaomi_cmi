@@ -798,11 +798,11 @@ vendor/lib64/libllvm-glnext.so|d85cbd0ecdb379c30a773c70ed244c2ab3eee46c
 vendor/lib64/libllvm-qcom.so|57f06f09c755206c57ee8b4665c4c1183c1b6759
 vendor/lib64/libllvm-qgl.so|09922e55c21211a93c23b2b21ced1e39920062fd
 
-# HotwordEnrollment - from MIUI-12.5.3
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|91c49e2f1f95fe76952eb55d7a936a997685b964
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
+# Hotword Enrollment - from MIUI V13.0.4.0.SJBMIXM
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|1f9513ba807bced528203f829eb9a8249e915d38
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|b53e90faf861f36c3b71f7f15f54960b1e9d6313
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
 
 # IFAA
 -vendor/app/IFAAService/IFAAService.apk
