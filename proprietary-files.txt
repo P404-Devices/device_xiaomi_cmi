@@ -133,6 +133,8 @@ vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
 vendor/etc/mixer_paths_overlay_dynamic.xml
 vendor/etc/mixer_paths_overlay_static.xml
+vendor/etc/sound_trigger_mixer_paths.xml
+vendor/etc/sound_trigger_platform_info.xml
 
 # Audio FX Modules
 vendor/lib/soundfx/libasphere.so
@@ -839,6 +841,7 @@ vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
 
 # Listen
+vendor/lib/hw/sound_trigger.primary.kona.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
@@ -849,6 +852,15 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libsmwrapper.so
+vendor/lib64/hw/sound_trigger.primary.kona.so
+vendor/lib64/libcapiv2svacnn.so
+vendor/lib64/libcapiv2svarnn.so
+vendor/lib64/libcapiv2vop.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs-osal.so
+vendor/lib64/libgcs.so
+vendor/lib64/liblistensoundmodel2.so
 
 # MM OSAL
 vendor/lib/libmmosal.so
