@@ -158,6 +158,9 @@ ro.vendor.radio.5g=3
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
+
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
