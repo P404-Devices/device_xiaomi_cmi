@@ -233,6 +233,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
+# Shims
+PRODUCT_PACKAGES += \
+    lib-watermarkshim
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
