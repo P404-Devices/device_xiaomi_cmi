@@ -609,4 +609,7 @@
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
+    <!-- the padding of the rounded corner -->
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+
 </resources>
