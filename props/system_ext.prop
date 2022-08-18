@@ -1,3 +1,6 @@
+# Bluetooth
+bluetooth.device.class_of_device=90,2,12
+
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 persist.sys.gps.fence=true
