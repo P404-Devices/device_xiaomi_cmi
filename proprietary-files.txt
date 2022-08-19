@@ -1324,3 +1324,4 @@ vendor/firmware/aw8697_rtp_1.bin
 # WiFi
 vendor/bin/cnss-daemon
 vendor/bin/nv_mac
+vendor/lib64/libcert_parse.wpa_s.so
