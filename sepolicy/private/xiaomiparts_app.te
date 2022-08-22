@@ -25,6 +25,8 @@ allow xiaomiparts_app cgroup:file rw_file_perms;
 allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:file create_file_perms;
 
+allow xiaomiparts_app system_data_file:dir { search };
+
 allow xiaomiparts_app {
   cgroup
   sysfs_thermal
