@@ -1,5 +1,4 @@
-type efs_block_device, dev_type;
-
+# Fingerprint device
 type fingerprint_device, dev_type;
 
 type sound_device, dev_type;
