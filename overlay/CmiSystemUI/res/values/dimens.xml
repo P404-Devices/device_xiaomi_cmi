@@ -18,7 +18,7 @@
     <dimen name="keyguard_indication_margin_bottom">30dp</dimen>
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
-    <dimen name="config_rounded_mask_size">122px</dimen>
+    <dimen name="config_rounded_mask_size">198px</dimen>
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">900px</dimen>

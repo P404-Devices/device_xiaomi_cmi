@@ -18,7 +18,7 @@
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
     <!-- the padding of the rounded corner -->
-    <dimen name="rounded_corner_content_padding">8dp</dimen>
+    <dimen name="rounded_corner_content_padding">43.25px</dimen>
 
     <!-- Default radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">156px</dimen>
@@ -27,6 +27,6 @@
         round. This value is used when retrieving the "radius" of the rounded corner in cases
         where the exact bezier curve cannot be retrieved.  This value will be subtracted from
         rounded_corner_radius to more accurately provide a "radius" for the rounded corner. -->
-    <dimen name="rounded_corner_radius_adjustment">54px</dimen>
+    <dimen name="rounded_corner_radius_adjustment">55px</dimen>
 
 </resources>
