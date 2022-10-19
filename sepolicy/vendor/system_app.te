@@ -5,7 +5,7 @@ allow system_app vendor_sysfs_battery_supply:dir { search };
 allow system_app vendor_sysfs_battery_supply:file { open read getattr };
 allow system_app proc_pagetypeinfo:file { read };
 allow system_app sysfs_zram:dir { search open read };
-allow system_app sysfs_zram:file { open read };
+allow system_app sysfs_zram:file { open read getattr };
 allow system_app zygote:unix_stream_socket { getopt };
 
 r_dir_file(system_app, vendor_sysfs_battery_supply)
