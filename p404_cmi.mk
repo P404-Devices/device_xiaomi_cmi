@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/cmi/device.mk)
 # Inherit from the 404 configuration.
 $(call inherit-product, vendor/404/configs/common.mk)
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, vendor/xiaomi/cmi-miuicamera/products/miuicamera.mk)
+
 # Set Boot Animination Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
