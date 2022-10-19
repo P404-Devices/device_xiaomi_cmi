@@ -1,1 +1,2 @@
 allow platform_app cgroup:file { open read };
+get_prop(platform_app, vendor_audio_prop);
