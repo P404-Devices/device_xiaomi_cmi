@@ -781,9 +781,9 @@ vendor/lib64/libgsl.so|a7eef1364ac0f92d16f439aef623ddd1e3112e8d
 vendor/lib64/libllvm-glnext.so|1c76e8d9a07dd4a317fea206854618df97bec9aa
 vendor/lib64/libllvm-qcom.so|e4ff6f0d3cd3823fa65768b935adfe878a4bda7a
 
-# Graphics (Vulkan) - from LA.UM.9.12.r1-14100-SMxx50.0
-vendor/lib/hw/vulkan.adreno.so|3c9aaf80e21610def254a2b0866ddf4da9222016
-vendor/lib64/hw/vulkan.adreno.so|bcc2dba212dc14dedef1ce76d99422fba93e032d
+# Graphics (Vulkan) - from LA.UM.9.12.r1-14400-SMxx50.0
+vendor/lib/hw/vulkan.adreno.so|ae95be239a5fc7ac66d2873a5bca1660667b1ece
+vendor/lib64/hw/vulkan.adreno.so|346bc3158cb9ff6c21f9e17389b4d3a5cb6e4d69
 
 # Hotword Enrollment - from MIUI V13.0.4.0.SJBMIXM
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|1f9513ba807bced528203f829eb9a8249e915d38
