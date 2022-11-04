@@ -70,4 +70,8 @@
     <string name="dirac_headset_scenario_video">Video</string>
     <string name="dirac_headset_scenario_vocal">Voice</string>
 
+    <!-- Powershare -->
+    <string name="powershare_enable_title">Powershare</string>
+    <string name="powershare_enable_summary">Use wireless charge to share you power to other devices.</string>
+
 </resources>

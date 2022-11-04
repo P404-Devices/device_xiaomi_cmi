@@ -1,4 +1,3 @@
-type xiaomiparts_app, domain;
 app_domain(xiaomiparts_app)
 
 allow xiaomiparts_app {
@@ -26,6 +25,9 @@ allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:file create_file_perms;
 
 allow xiaomiparts_app system_data_file:dir { search };
+
+allow xiaomiparts_app sysfs_revert_charge:dir search;
+allow xiaomiparts_app sysfs_revert_charge:file rw_file_perms;
 
 allow xiaomiparts_app {
   cgroup

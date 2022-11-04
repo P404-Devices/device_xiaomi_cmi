@@ -1,0 +1,3 @@
+type xiaomiparts_app, domain;
+type sysfs_revert_charge, fs_type, sysfs_type;
+typeattribute xiaomiparts_app mlstrustedsubject;
