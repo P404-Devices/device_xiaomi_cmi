@@ -31,7 +31,7 @@ public class PowerShareSettingsFragment extends PreferenceFragment implements
 
     private SwitchPreference mPowerSharePreference;
     private static final String POWERSHARE_ENABLE_KEY = "powershare_enable";
-    private static final String POWERSHARE_NODE = "/sys/class/power_supply/wireless/reverse_chg_mode";
+    private static final String POWERSHARE_NODE = "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/reverse_chg_mode";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
