@@ -40,6 +40,16 @@ on post-fs-data
     mkdir /data/vendor/thermal/config 0771 root system
     chown gps system /dev/ttyHS1
 
+on property:init.svc.vendor.nv_mac=stopped
+    start vendor.btmac-sh
+
+service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
+    class late_start
+    user system
+    group system bluetooth wifi
+    oneshot
+    disabled
+
 on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/touch/touch_dev/partial_diff_data

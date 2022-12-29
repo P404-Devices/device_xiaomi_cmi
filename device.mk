@@ -167,6 +167,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mdm.sh \
+    init.mi.btmac.sh \
     init.mi.usb.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
