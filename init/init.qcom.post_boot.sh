@@ -194,6 +194,10 @@ case "$target" in
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
 
+        # Enable idle state listener
+        echo 1 > /sys/class/drm/card0/device/idle_encoder_mask
+        echo 100 > /sys/class/drm/card0/device/idle_timeout_ms
+
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
