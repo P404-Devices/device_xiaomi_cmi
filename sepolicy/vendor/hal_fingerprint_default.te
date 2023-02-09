@@ -44,3 +44,5 @@ allow hal_fingerprint_default vendor_panel_prop:file {read open getattr map };
 hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
 binder_call(hal_fingerprint_default, vendor_hal_perf_default)
 allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+allow hal_fingerprint_default fingerprint_vendor_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fingerprint_vendor_data_file:file rw_file_perms;
